@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+  </startup>
+  <appSettings>
+    <!-- General Config-->
+    <add key="mainFolder" value="C:\DevolucionesLOG" />
+    <add key="folderPDF" value="C:\\DevolucionesLOG\\pdf\\{0}.pdf" />
+    <add key="imagenPDF" value="C:\\DevolucionesLOG\\images\\mac.jpg"/>
+    <add key="rutaDelArchivo" value=""/>
+    <!-- Epicor config -->
+    <add key="epiEnvironment" value="C:\\Epicor\\ERP10.0ClientTest\\Client\\config\\{0}.sysconfig" />
+    <add key="epiConfig" value="C:\Epicor\ERP10.0ClientTest\Client\config\Epicor10.sysconfig" />
+    <add key="epiCompany" value="DLMAC" />
+    <!-- Cadenas de conexión a ambos servers -->
+    <add key="connRMADB" value="Data Source=TISERVER;Initial Catalog=Devoluciones;Persist Security Info=True;User ID=sa;Password=Epicor123"/>
+    <add key="connMultistop" value="Data Source=APPMULTISERVER;Initial Catalog=MS_gictraficoyreparto;Persist Security Info=True;User ID=sa;Password=Epicor123" />
+    <add key="connEpicor" value="Data Source=TDBE10SERVER;Initial Catalog=ERP10DB;Persist Security Info=True;User ID=sa;Password=Epicor123" />
+    <add key="SQLiteConn" value="Data Source=dbDevoluciones.db;Version=3;New=True;Compress=True;"/>
+    <!-- Queries Epicor -->
+    <add key="obtRelacion" value="SELECT id,descripcion FROM dbo.LI_motivosdevolucion1;" />
+    <add key="obtChoferes" value="SELECT c.id,c.nombre FROM APPMULTISERVER.MS_gictraficoyrepartopruebas.dbo.LI_choferes c INNER JOIN ERP10DB.dbo.MS_DevChfrs d ON ( d.ResponsableRelacion = c.id ) GROUP BY c.id,c.nombre ORDER BY c.id;" />
+    <add key="obtInvoices" value="SELECT d.Factura,d.legalnumber,d.NumeroCliente + ' - ' + c.Name AS Cliente, COUNT(d.FolioRelacion) AS Lineas, d.FolioRelacion FROM dbo.MS_DevChfrs d INNER JOIN Erp.Customer c ON (c.CustID = d.NumeroCliente) WHERE c.Company = 'DLMAC' AND d.ResponsableRelacion =  {0} GROUP BY d.Factura,d.legalnumber,d.NumeroCliente,c.Name, d.FolioRelacion;" />
+    <add key="obtInvoiceDetail" value="SELECT d.InvoiceNum AS Factura,d.InvoiceLine AS Linea,d.PartNum ID_Parte,d.LineDesc AS Descripcion,d.PackNum AS Empaque,d.PackLine AS LineaE,y.motivodevolucion AS Motivo,d.OrderNum AS Orden,d.OrderLine AS LineaO,d.OrderRelNum AS Relacion,y.DevAlmacen,y.unidad,y.Clasificacion,z.ShortChar01 AS Ubicacion,y.Observaciones FROM Erp.InvcDtl d CROSS APPLY ( SELECT r.Clasificacion,r.motivodevolucion,r.DevAlmacen,r.unidad,r.Observaciones FROM ERP10DB.dbo.MS_DevChfrs r WHERE d.Company = 'DLMAC' AND r.IdProducto = d.PartNum AND r.Factura = d.InvoiceNum) y CROSS APPLY ( SELECT c.Key1,c.Character01,c.ShortChar01 FROM ERP10DB.Ice.UD37 c WHERE c.Company = 'DLMAC' AND c.Key5 = 17 AND c.Key1 = y.Clasificacion) z WHERE d.InvoiceNum = {0} GROUP BY d.InvoiceNum,d.InvoiceLine,d.PartNum,d.LineDesc,d.PackNum,d.PackLine,y.motivodevolucion,d.OrderNum,d.OrderLine,d.OrderRelNum,y.DevAlmacen,y.unidad,y.Clasificacion,z.ShortChar01,y.Observaciones ORDER BY d.InvoiceLine;" />
+    <add key="consultarRMA" value="SELECT RMANum FROM ERP10DB.Erp.RMAHead WHERE CustNum = {0} AND InvoiceNum = {1} AND OpenRMA = 1;"/>
+    <add key="obtEmpaques" value="SELECT empaque,empaquelinea FROM ERP10DB.dbo.MS_DevChfrs WHERE Factura = {0}" />
+    <add key="folioTurno" value="DLM-"/>
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+  
+    <!-- Confi-->
+  </appSettings>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" credentialsProvider="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

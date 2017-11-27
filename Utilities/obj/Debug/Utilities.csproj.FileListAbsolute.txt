@@ -1,0 +1,40 @@
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\Utilities\bin\Debug\Utilities.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\Utilities\bin\Debug\Utilities.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\Utilities\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\Utilities\bin\Debug\itextsharp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\Utilities\bin\Debug\System.Data.SQLite.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\Utilities\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\Utilities\bin\Debug\System.Data.SQLite.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\Utilities\obj\Debug\Utilities.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\Utilities\obj\Debug\Utilities.pdb
+C:\Users\analista_ifc\documents\visual studio 2015\Projects\ControlDevoluciones\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\Utilities\bin\Debug\Utilities.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\Utilities\bin\Debug\Utilities.pdb
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\Utilities\bin\Debug\DevComponents.DotNetBar2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\Utilities\bin\Debug\itextsharp.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\Utilities\bin\Debug\System.Data.SQLite.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\Utilities\bin\Debug\DevComponents.DotNetBar2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\Utilities\bin\Debug\System.Data.SQLite.pdb
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\Utilities\obj\Debug\Utilities.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\Utilities\obj\Debug\Utilities.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\Utilities\bin\Debug\Utilities.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\Utilities\bin\Debug\Utilities.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\Utilities\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\Utilities\bin\Debug\itextsharp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\Utilities\bin\Debug\System.Data.SQLite.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\Utilities\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\Utilities\bin\Debug\System.Data.SQLite.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\Utilities\obj\Debug\Utilities.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\Utilities\obj\Debug\Utilities.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Utilities\bin\Debug\Utilities.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Utilities\bin\Debug\Utilities.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Utilities\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Utilities\bin\Debug\itextsharp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Utilities\bin\Debug\System.Data.SQLite.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Utilities\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Utilities\bin\Debug\System.Data.SQLite.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Utilities\obj\Debug\Utilities.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Utilities\obj\Debug\Utilities.pdb

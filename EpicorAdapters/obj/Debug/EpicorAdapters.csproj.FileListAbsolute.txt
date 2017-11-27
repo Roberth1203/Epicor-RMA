@@ -1,0 +1,676 @@
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\EpicorAdapters.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\EpicorAdapters.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Epicor.Ice.Version.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Epicor.ServiceModel.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Adapters.InvTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Adapters.RMADisp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Adapters.RMAProc.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Adapters.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Contracts.BO.InvTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Contracts.BO.RMADisp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Contracts.BO.RMAProc.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Contracts.BO.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Lib.Configurator.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Lib.GlobalStrings.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Adapters.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.AppSettingsHandler.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.Deployment.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.EpiClientLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Utilities.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\itextsharp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\System.Data.SQLite.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Epicor.App.Version.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.EpiResourceLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.Misc.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinEditors.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Shared.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDock.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTabControl.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Common.ContractInterfaces.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfigurationRuntime.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Shared.Lib.Configurator.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinToolbars.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.UI.CodeEditor.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.UI.Controls.Combos.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.FWCombos.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfigurationRuntimeExt.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.Help.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTree.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinListView.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.SessionMod.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.BOReader.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.BroadcastTower.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.Custom.CodeEditLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinChart.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSchedule.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Attachment.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ClassAttribute.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGauge.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.PredictiveSearch.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Epicor.Social.DataContracts.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.GenXData.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Menu.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.ClientPlugins.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.BAQDesigner.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.DynamicQuery.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.FileTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ServerPath.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDataSource.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.SysTag.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Microsoft.mshtml.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.QuickSearch.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.AppStylistSupport.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.NamedSearch.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.About.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ClientCache.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.Sec.SecRights.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.ZDataTable.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.ExcelReader.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.Logon.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.SysConfig.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\VisualStudioDebugHelper.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.RestrictedLicenseLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Documents.Excel.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.LangTran.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Adapters.ConfiguratorUDFuncs.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.Bpm.Shared.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfiguratorUDFuncs.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Adapters.ConfigurationRuntime.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Annotation.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Syncfusion.Edit.Windows.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Syncfusion.Shared.Base.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.FileTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.LangName.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Lib.ChangePassword.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Ice.Contracts.BO.BpMethod.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Syncfusion.Core.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Utilities.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\System.Data.SQLite.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.Misc.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinEditors.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Shared.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDock.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTabControl.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinToolbars.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTree.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinListView.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinChart.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSchedule.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGauge.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDataSource.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.AppStylistSupport.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Documents.Excel.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Syncfusion.Edit.Windows.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Syncfusion.Shared.Base.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Epicor.ServiceModel.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Erp.Lib.Configurator.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Erp.Lib.GlobalStrings.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Deployment.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.EpiClientLib.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.EpiResourceLib.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Help.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.About.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.ExcelReader.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Logon.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Bpm.Shared.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.ChangePassword.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\obj\Debug\EpicorAdapters.csprojResolveAssemblyReference.cache
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\obj\Debug\EpicorAdapters.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\ControlDevoluciones\EpicorAdapters\obj\Debug\EpicorAdapters.pdb
+C:\Users\analista_ifc\documents\visual studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Adapters.ARInvoice.dll
+C:\Users\analista_ifc\documents\visual studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ARInvoice.dll
+C:\Users\analista_ifc\documents\visual studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\es-MX\Erp.Contracts.BO.ARInvoice.resources.dll
+C:\Users\analista_ifc\documents\visual studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\MetroFramework.Design.dll
+C:\Users\analista_ifc\documents\visual studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\MetroFramework.dll
+C:\Users\analista_ifc\documents\visual studio 2015\Projects\ControlDevoluciones\EpicorAdapters\bin\Debug\MetroFramework.Fonts.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\EpicorAdapters.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\EpicorAdapters.pdb
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Utilities.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\itextsharp.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\System.Data.SQLite.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Epicor.App.Version.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.EpiResourceLib.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.Misc.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinEditors.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Shared.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDock.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTabControl.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Erp.Common.ContractInterfaces.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfigurationRuntime.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Erp.Shared.Lib.Configurator.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinToolbars.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Erp.UI.CodeEditor.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Erp.UI.Controls.Combos.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.FWCombos.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfigurationRuntimeExt.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.Help.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTree.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinListView.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.SessionMod.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.BOReader.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.BroadcastTower.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.Custom.CodeEditLib.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinChart.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSchedule.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Attachment.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ClassAttribute.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGauge.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.PredictiveSearch.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Epicor.Social.DataContracts.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.GenXData.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Menu.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.ClientPlugins.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.BAQDesigner.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.DynamicQuery.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.FileTransfer.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ServerPath.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDataSource.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.SysTag.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Microsoft.mshtml.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.QuickSearch.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.AppStylistSupport.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.NamedSearch.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.About.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ClientCache.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.Sec.SecRights.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.ZDataTable.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.ExcelReader.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.Logon.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.SysConfig.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\VisualStudioDebugHelper.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.RestrictedLicenseLib.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Documents.Excel.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.LangTran.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Erp.Adapters.ConfiguratorUDFuncs.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.Bpm.Shared.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfiguratorUDFuncs.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Erp.Adapters.ConfigurationRuntime.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Annotation.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Syncfusion.Edit.Windows.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Syncfusion.Shared.Base.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.FileTransfer.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.LangName.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Lib.ChangePassword.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.BpMethod.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Syncfusion.Core.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Utilities.pdb
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\System.Data.SQLite.pdb
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.Misc.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinEditors.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Shared.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDock.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTabControl.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinToolbars.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTree.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinListView.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinChart.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSchedule.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGauge.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDataSource.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.AppStylistSupport.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Documents.Excel.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Syncfusion.Edit.Windows.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\Syncfusion.Shared.Base.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Epicor.ServiceModel.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Erp.Contracts.BO.ARInvoice.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Erp.Lib.Configurator.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Erp.Lib.GlobalStrings.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Deployment.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.EpiClientLib.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.EpiResourceLib.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Help.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.About.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.ExcelReader.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Logon.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Bpm.Shared.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.ChangePassword.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\obj\Debug\EpicorAdapters.csprojResolveAssemblyReference.cache
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\obj\Debug\EpicorAdapters.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Previo cambios en vista de devoluciones)\EpicorAdapters\obj\Debug\EpicorAdapters.pdb
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\EpicorAdapters.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\EpicorAdapters.pdb
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Utilities.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\itextsharp.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\System.Data.SQLite.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Epicor.App.Version.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.EpiResourceLib.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.Misc.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinEditors.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Shared.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDock.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTabControl.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Erp.Common.ContractInterfaces.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfigurationRuntime.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Erp.Shared.Lib.Configurator.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinToolbars.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Erp.UI.CodeEditor.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Erp.UI.Controls.Combos.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.FWCombos.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfigurationRuntimeExt.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.Help.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTree.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinListView.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.SessionMod.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.BOReader.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.BroadcastTower.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.Custom.CodeEditLib.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinChart.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSchedule.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Attachment.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ClassAttribute.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGauge.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.PredictiveSearch.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Epicor.Social.DataContracts.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.GenXData.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Menu.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.ClientPlugins.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.BAQDesigner.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.DynamicQuery.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.FileTransfer.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ServerPath.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDataSource.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.SysTag.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Microsoft.mshtml.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.QuickSearch.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.AppStylistSupport.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.NamedSearch.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.About.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ClientCache.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.Sec.SecRights.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.ZDataTable.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.ExcelReader.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.Logon.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.SysConfig.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\VisualStudioDebugHelper.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.RestrictedLicenseLib.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Documents.Excel.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v12.2.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.LangTran.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Erp.Adapters.ConfiguratorUDFuncs.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.Bpm.Shared.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfiguratorUDFuncs.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Erp.Adapters.ConfigurationRuntime.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Annotation.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Syncfusion.Edit.Windows.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Syncfusion.Shared.Base.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.FileTransfer.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.LangName.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Lib.ChangePassword.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Ice.Contracts.BO.BpMethod.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Syncfusion.Core.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Utilities.pdb
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\System.Data.SQLite.pdb
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.Misc.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinEditors.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Shared.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDock.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTabControl.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinToolbars.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTree.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinListView.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinChart.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSchedule.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGauge.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDataSource.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.AppStylistSupport.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Documents.Excel.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v12.2.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Syncfusion.Edit.Windows.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\Syncfusion.Shared.Base.xml
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Epicor.ServiceModel.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Erp.Contracts.BO.ARInvoice.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Erp.Lib.Configurator.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Erp.Lib.GlobalStrings.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Deployment.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.EpiClientLib.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.EpiResourceLib.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Help.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.About.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.ExcelReader.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Logon.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Bpm.Shared.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.ChangePassword.resources.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\obj\Debug\EpicorAdapters.csprojResolveAssemblyReference.cache
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\obj\Debug\EpicorAdapters.dll
+D:\Desarrollos CAOR\Control Devoluciones\ControlDevoluciones (Ajuste de validación de ubicación de líneas)\EpicorAdapters\obj\Debug\EpicorAdapters.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\EpicorAdapters.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\EpicorAdapters.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Epicor.Ice.Version.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Epicor.ServiceModel.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Adapters.ARInvoice.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Adapters.InvTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Adapters.RMADisp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Adapters.RMAProc.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Adapters.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ARInvoice.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Contracts.BO.InvTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Contracts.BO.RMADisp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Contracts.BO.RMAProc.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Contracts.BO.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Lib.Configurator.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Lib.GlobalStrings.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Adapters.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.AppSettingsHandler.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.Deployment.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.EpiClientLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\MetroFramework.Design.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\MetroFramework.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Utilities.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\itextsharp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\System.Data.SQLite.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Epicor.App.Version.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.EpiResourceLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.Misc.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinEditors.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Shared.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDock.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTabControl.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Common.ContractInterfaces.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfigurationRuntime.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Shared.Lib.Configurator.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinToolbars.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.UI.CodeEditor.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.UI.Controls.Combos.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.FWCombos.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfigurationRuntimeExt.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.Help.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTree.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinListView.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.SessionMod.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.BOReader.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.BroadcastTower.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.Custom.CodeEditLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinChart.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSchedule.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Attachment.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ClassAttribute.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGauge.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.PredictiveSearch.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Epicor.Social.DataContracts.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.GenXData.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Menu.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.ClientPlugins.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.BAQDesigner.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.DynamicQuery.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.FileTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ServerPath.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDataSource.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.SysTag.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Microsoft.mshtml.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.QuickSearch.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.AppStylistSupport.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.NamedSearch.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.About.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ClientCache.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.Sec.SecRights.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.ZDataTable.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.ExcelReader.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.Logon.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.SysConfig.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\VisualStudioDebugHelper.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.RestrictedLicenseLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Documents.Excel.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.LangTran.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Adapters.ConfiguratorUDFuncs.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.Bpm.Shared.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfiguratorUDFuncs.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Erp.Adapters.ConfigurationRuntime.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Annotation.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Syncfusion.Edit.Windows.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Syncfusion.Shared.Base.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.FileTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.LangName.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Lib.ChangePassword.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Ice.Contracts.BO.BpMethod.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Syncfusion.Core.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Utilities.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\System.Data.SQLite.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.Misc.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinEditors.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Shared.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDock.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTabControl.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinToolbars.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTree.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinListView.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinChart.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSchedule.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGauge.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDataSource.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.AppStylistSupport.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Documents.Excel.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Syncfusion.Edit.Windows.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\Syncfusion.Shared.Base.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Epicor.ServiceModel.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Erp.Contracts.BO.ARInvoice.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Erp.Lib.Configurator.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Erp.Lib.GlobalStrings.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Deployment.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.EpiClientLib.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.EpiResourceLib.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Help.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.About.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.ExcelReader.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Logon.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Bpm.Shared.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.ChangePassword.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\obj\Debug\EpicorAdapters.csprojResolveAssemblyReference.cache
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\obj\Debug\EpicorAdapters.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\EpicorAdapters\obj\Debug\EpicorAdapters.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\EpicorAdapters.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\EpicorAdapters.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Epicor.Ice.Version.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Epicor.ServiceModel.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Adapters.ARInvoice.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Adapters.InvTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Adapters.RMADisp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Adapters.RMAProc.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Adapters.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ARInvoice.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Contracts.BO.InvTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Contracts.BO.RMADisp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Contracts.BO.RMAProc.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Contracts.BO.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Lib.Configurator.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Lib.GlobalStrings.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Adapters.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.UserFile.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.AppSettingsHandler.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.Deployment.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.EpiClientLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\MetroFramework.Design.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\MetroFramework.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Utilities.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\itextsharp.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\System.Data.SQLite.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Epicor.App.Version.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.EpiResourceLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.Misc.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinEditors.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Shared.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDock.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTabControl.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Common.ContractInterfaces.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfigurationRuntime.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Shared.Lib.Configurator.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinToolbars.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.UI.CodeEditor.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.UI.Controls.Combos.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.FWCombos.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfigurationRuntimeExt.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.Help.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTree.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinListView.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.SessionMod.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.BOReader.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.BroadcastTower.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.Custom.CodeEditLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinChart.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSchedule.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Attachment.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ClassAttribute.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGauge.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.PredictiveSearch.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Epicor.Social.DataContracts.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.GenXData.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Menu.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.ClientPlugins.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.BAQDesigner.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.DynamicQuery.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.FileTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ServerPath.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDataSource.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.SysTag.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Microsoft.mshtml.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.QuickSearch.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.AppStylistSupport.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.NamedSearch.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.About.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.ClientCache.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.Sec.SecRights.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.ZDataTable.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.ExcelReader.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.Logon.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.SysConfig.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\VisualStudioDebugHelper.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.RestrictedLicenseLib.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Documents.Excel.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v12.2.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.LangTran.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Adapters.ConfiguratorUDFuncs.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.Bpm.Shared.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Contracts.BO.ConfiguratorUDFuncs.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Erp.Adapters.ConfigurationRuntime.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.Annotation.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Syncfusion.Edit.Windows.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Syncfusion.Shared.Base.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.Lib.FileTransfer.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.LangName.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Lib.ChangePassword.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Ice.Contracts.BO.BpMethod.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Syncfusion.Core.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Utilities.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\System.Data.SQLite.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.Misc.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinEditors.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Shared.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDock.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTabControl.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinToolbars.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinTree.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinListView.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinChart.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSchedule.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGauge.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinDataSource.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.AppStylistSupport.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Documents.Excel.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v12.2.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Syncfusion.Edit.Windows.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\Syncfusion.Shared.Base.xml
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Epicor.ServiceModel.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Erp.Contracts.BO.ARInvoice.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Erp.Lib.Configurator.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Erp.Lib.GlobalStrings.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Deployment.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.EpiClientLib.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.EpiResourceLib.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Help.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.About.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.ExcelReader.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Logon.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.Bpm.Shared.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\bin\Debug\es-MX\Ice.Lib.ChangePassword.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\obj\Debug\EpicorAdapters.csprojResolveAssemblyReference.cache
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\obj\Debug\EpicorAdapters.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC v2.0\EpicorAdapters\obj\Debug\EpicorAdapters.pdb
