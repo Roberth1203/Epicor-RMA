@@ -16,7 +16,17 @@ namespace ControlDevoluciones
         public DataTable dtFacturas = new DataTable();
         SQLUtilities sql = new SQLUtilities();
 
-        public async Task<DataTable> obtenerFacturas(string currentDriver, string EpiConnection)
+        public async Task<DataTable> obtEventDtl(string evento, string EpiConnection)
+        {
+            try
+            {
+                sql.getRecords(String.Format("SELECT DistrDev,FolioRelacion,NumeroCliente FROM dbo.MS_DevChfrs_tst",evento),null,EpiConnection);
+                return dtFacturas;
+            }
+            catch (Exception) { return dtFacturas; }
+        }
+
+        public async Task<DataTable> obtenerFacturas(string EventKey, string EpiConnection)
         {
             try
             {
@@ -29,7 +39,7 @@ namespace ControlDevoluciones
                 char[] separadores = { ':', ',' };
                 bool flag = false;
                 string query = ConfigurationManager.AppSettings["obtInvoices"].ToString();
-                DataTable result = sql.getRecords(String.Format(query, currentDriver.Substring(0, 5)), null, EpiConnection);
+                DataTable result = sql.getRecords(String.Format(query, EventKey), null, EpiConnection);
                 dtFacturas = result.Clone(); // Se clona el formato del DataTable result a dtFacturas que es donde se irán agregando las filas al final de las validaciones
 
                 do

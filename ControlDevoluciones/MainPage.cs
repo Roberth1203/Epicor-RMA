@@ -60,10 +60,25 @@ namespace ControlDevoluciones
         #region Eventos del form
         private void PantallaPrincipal_Load(object sender, EventArgs e)
         {
-            getDrivers();
+            //getDrivers();
+            tmrLoader.Enabled = true;
             sincronizaFacturas();
             fillImageLists();
         }
+
+        private async void tmrLoader_Tick(object sender, EventArgs e)
+        {
+            LoadInitData data = new LoadInitData();
+            tmrLoader.Stop();
+            data.Show();
+            await Task.Factory.StartNew(async () =>
+            {
+                await fillAdvTree();
+            }).Unwrap();
+            data.Close();
+            tmrLoader.Enabled = false;
+        }
+
 
         private void PantallaPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -74,6 +89,7 @@ namespace ControlDevoluciones
         #region Eventos de botones
         private async void btnObtRelacion_Click(object sender, EventArgs e)
         {
+            /*
             DataTable res = new DataTable();
             gifSearchInvc.Visible = true;
             sincronizaFacturas();
@@ -101,13 +117,12 @@ namespace ControlDevoluciones
                 txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
             }
             
-            //ToastNotification.DefaultToastGlowColor = eToastGlowColor.Red;
             ToastNotification.DefaultToastPosition = eToastPosition.MiddleCenter;
             ToastNotification.Show(this, "Facturas cargadas correctamente", 2000);
 
-            dgvFacturas.Visible = true;
-            chkDevolverTodo.Visible = true;   
+            dgvFacturas.Visible = true;   
             gifSearchInvc.Visible = false;
+            */
         }
 
         private async void btnRMA_Click(object sender, EventArgs e)
@@ -201,11 +216,12 @@ namespace ControlDevoluciones
 
                 txtFacturasProcesadas.Text += "Sincronizando las facturas actuales...\n";
                 txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
+                /*
                 await Task.Factory.StartNew(async () =>
                 {
                     res = await functions.obtenerFacturas(listaChoferes.SelectedItem.ToString(), conEpicor);
                 }).Unwrap();
-
+                */
                 if (res.Rows.Count > 0)
                 {
                     dgvFacturas.DataSource = res;
@@ -223,7 +239,7 @@ namespace ControlDevoluciones
                 ToastNotification.Show(this, "Facturas sincronizadas correctamente", 2000);
 
                 dgvFacturas.Visible = true;
-                chkDevolverTodo.Visible = true;
+                
                 gifSearchInvc.Visible = false;
 
 
@@ -293,7 +309,7 @@ namespace ControlDevoluciones
 
             foreach (DataRow row in dt.Rows)
             {
-                listaChoferes.Items.Add(row[0].ToString() + " - " + row[1].ToString());
+                //listaChoferes.Items.Add(row[0].ToString() + " - " + row[1].ToString());
                 index++;
             }
         }
@@ -504,21 +520,18 @@ namespace ControlDevoluciones
                         int lineaRMA = existencia + 1;
                         string tarimaDest = await definirTarimaDestino(ubicacion, zona);
                         epiAdapter.RMANewLine(RMA, lineaRMA, legal, factura, lineaFactura, numOrden, lineaOrden, relOrden, parte, desc, razon, cant, UOM, customer, comentarios, almacen, ubicacion, tarimaDest, primbin);
-
-                        if (epiAdapter.recolector.Contains("correctamente"))
+                        
+                        try
                         {
-                            try
-                            {
-                                util.SQLstatement(String.Format("INSERT INTO tb_FactDtl(FactNum,FactLine,PartNum,LineDesc,PackNum,PackLine,ReturnReason,OrderNum,OrderLine,OrderRel,ReturnQty,QtyUOM,PartClass,Note,ZoneID,PrimBin) VALUES({0},{1},'{2}','{3}',{4},{5},'{6}',{7},{8},{9},{10},'{11}','{12}','{13}','{14}','{15}');", factura, lineaFactura, parte, desc, Pack, PackLine, razon, numOrden, lineaOrden, relOrden, cant, UOM, ubicacion, comentarios, zona, primbin), TISERVER, null);
-                            }
-                            catch (System.Data.SqlClient.SqlException x)
-                            {
-                                MessageBox.Show(x.Message);
-                            }
-                            catch (Exception y)
-                            {
-                                MessageBox.Show(y.Message);
-                            }
+                            util.SQLstatement(String.Format("INSERT INTO tb_FactDtl(FactNum,FactLine,PartNum,LineDesc,PackNum,PackLine,ReturnReason,OrderNum,OrderLine,OrderRel,ReturnQty,QtyUOM,PartClass,Note,ZoneID,PrimBin) VALUES({0},{1},'{2}','{3}',{4},{5},'{6}',{7},{8},{9},{10},'{11}','{12}','{13}','{14}','{15}');", factura, lineaFactura, parte, desc, Pack, PackLine, razon, numOrden, lineaOrden, relOrden, cant, UOM, ubicacion, comentarios, zona, primbin), TISERVER, null);
+                        }
+                        catch (System.Data.SqlClient.SqlException x)
+                        {
+                            MessageBox.Show(x.Message);
+                        }
+                        catch (Exception y)
+                        {
+                            MessageBox.Show(y.Message);
                         }
 
                         recolectorEventos += epiAdapter.recolector + "\n";
@@ -656,7 +669,6 @@ namespace ControlDevoluciones
             */
 
             dgvDetFactura.Visible = false;
-            chkDevolverTodo.Visible = false;
             //txtChofer.Text = listaChoferes.SelectedItem.ToString();
             //Console.Write(listaChoferes.SelectedItem.ToString());
         }
@@ -708,30 +720,6 @@ namespace ControlDevoluciones
         private void labelItem2_Click(object sender, EventArgs e)
         {
 
-        }
-                       
-        private void chkDevolverTodo_CheckedChanged(object sender, EventArgs e)
-        {
-            int pos = 0;
-
-            if (chkDevolverTodo.Checked)
-            {
-                foreach (DataGridViewRow row in dgvFacturas.Rows)
-                {
-                    dgvFacturas.Rows[pos].Cells[0].Value = true;
-                    btnRMA.Enabled = true;
-                    pos++;
-                }
-            }
-            else
-            {
-                foreach (DataGridViewRow row in dgvFacturas.Rows)
-                {
-                    dgvFacturas.Rows[pos].Cells[0].Value = false;
-                    btnRMA.Enabled = false;
-                    pos++;
-                }
-            }
         }
 
         private void btnActualizarPendientes_Click(object sender, EventArgs e)
@@ -1071,6 +1059,136 @@ namespace ControlDevoluciones
                 }
             }
             catch (System.NullReferenceException) { }
+        }
+
+        private void sideNavItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async Task fillAdvTree()
+        {
+            try
+            {
+                DataTable sql = util.getRecords("SELECT x.ResponsableRelacion,c.Name,x.Evento_Key FROM TISERVER.DevolucionesTEST.dbo.Choferes c CROSS APPLY(SELECT d.ResponsableRelacion, Evento_Key FROM dbo.MS_DevChfrs_tst d WHERE d.ResponsableRelacion = c.Id)x GROUP BY x.ResponsableRelacion, c.Name, x.Evento_Key ORDER BY x.ResponsableRelacion;", null, conEpicor);
+                
+                advTreeDrivers.ImageList = imgListTreeDrivers;
+                DevComponents.AdvTree.Node nodeDriver;
+                DevComponents.AdvTree.Node nodeEvent;
+                DevComponents.AdvTree.Node nodeAux;
+                int ind = 0, iDriver = 0, iEvent = 0;
+                string tmpUser = String.Empty;
+                string tmpEvent = String.Empty;
+
+                foreach (DataRow row in sql.Rows)
+                {
+                    if (tmpUser.Equals(""))
+                    {
+                        tmpUser = sql.Rows[ind].ItemArray[0].ToString();
+                        tmpEvent = sql.Rows[ind].ItemArray[2].ToString();
+
+                        nodeDriver = new DevComponents.AdvTree.Node(sql.Rows[ind].ItemArray[0].ToString() + " - " + sql.Rows[ind].ItemArray[1].ToString());
+                        nodeEvent = new DevComponents.AdvTree.Node(sql.Rows[ind].ItemArray[2].ToString());
+                        nodeDriver.ImageIndex = 1;
+                        nodeEvent.ImageIndex = 2;
+                        nodeDriver.ImageExpandedIndex = 0;
+                        nodeDriver.Selectable = false;
+                        nodeDriver.Enabled = false;
+                        nodeDriver.Nodes.Add(nodeEvent);
+                        advTreeDrivers.Nodes.Add(nodeDriver);
+                        ind++;
+                    }
+                    else
+                    {
+                        if (!sql.Rows[ind].ItemArray[0].ToString().Contains(tmpUser)) //El chofer no se encuentra cargado en la lista
+                        {
+                            tmpUser = sql.Rows[ind].ItemArray[0].ToString();
+                            tmpEvent = sql.Rows[ind].ItemArray[2].ToString();
+                            nodeDriver = new DevComponents.AdvTree.Node(sql.Rows[ind].ItemArray[0].ToString() + " - " + sql.Rows[ind].ItemArray[1].ToString());
+                            nodeEvent = new DevComponents.AdvTree.Node(sql.Rows[ind].ItemArray[2].ToString());
+                            nodeDriver.ImageIndex = 1;
+                            nodeEvent.ImageIndex = 2;
+                            nodeDriver.ImageExpandedIndex = 0;
+                            nodeDriver.Selectable = false;
+                            nodeDriver.Enabled = false;
+                            nodeDriver.Nodes.Add(nodeEvent);
+                            advTreeDrivers.Nodes.Add(nodeDriver);
+                            iDriver++;
+                        }
+                        else // El chofer ya se encuentra agregado en la vista
+                        {
+                            nodeAux = advTreeDrivers.Nodes[iDriver];
+
+                            if (!sql.Rows[ind].ItemArray[2].ToString().Contains(tmpEvent)) //Si el evento_key no está repetido
+                            {
+                                tmpEvent = sql.Rows[ind].ItemArray[2].ToString();
+                                nodeEvent = new DevComponents.AdvTree.Node(tmpEvent);
+                                nodeEvent.ImageIndex = 2;
+                                nodeAux.Nodes.Add(nodeEvent);
+                            }
+                        }
+                        ind++;
+                    }
+                }
+            }
+            catch (System.Data.SqlClient.SqlException w)
+            {
+                MessageBox.Show(w.Message);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private async void advTreeDrivers_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
+        {
+            try
+            {
+                if (e.Node.Enabled == true)
+                {
+                    // Otención de registros
+                    DataTable res = new DataTable();
+                    gifSearchInvc.Visible = true;
+                    
+                    await Task.Factory.StartNew(async () =>
+                    {
+                        res = await functions.obtenerFacturas(e.Node.Text, conEpicor);
+                    }).Unwrap();
+
+                    if (res.Rows.Count > 0)
+                        dgvFacturas.DataSource = res;
+
+                    dgvFacturas.Visible = true;
+                    gifSearchInvc.Visible = false;
+
+                    DataTable d = new DataTable();
+                    await Task.Factory.StartNew(async () =>
+                    {
+                        d = await getRowsByEvent(e.Node.Text);
+                    }).Unwrap();
+
+                    dgvDetFactura.DataSource = d;
+                    dgvDetFactura.Visible = true;
+                }
+            }
+            catch (System.NullReferenceException) { }
+        }
+
+        private async Task<DataTable> getRowsByEvent(string Event)
+        {
+            DataTable DBrecords = util.getRecords(String.Format("SELECT * FROM dbo.MS_DevChfrs_tst Where Evento_Key = '{0}'", Event), null, conEpicor);
+            DataRow[] returnedRows;
+
+            returnedRows = DBrecords.Select(String.Format("Evento_Key = '{0}'", Event));
+            for (int x = 0; x < returnedRows.Length; x++)
+            {
+                MessageBox.Show("Factura: " + returnedRows[x][5]);
+            }
+
+            DataTable filterResult = returnedRows.CopyToDataTable();
+
+            return filterResult;
         }
     }
 }

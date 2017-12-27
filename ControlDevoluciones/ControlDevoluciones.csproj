@@ -131,6 +131,12 @@
     <Compile Include="LoaderForm.Designer.cs">
       <DependentUpon>LoaderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadInitData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadInitData.Designer.cs">
+      <DependentUpon>LoadInitData.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoaderForm.resx">
       <DependentUpon>LoaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadInitData.resx">
+      <DependentUpon>LoadInitData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

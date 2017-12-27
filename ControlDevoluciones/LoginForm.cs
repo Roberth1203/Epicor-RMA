@@ -33,6 +33,12 @@ namespace ControlDevoluciones
         public LoginForm()
         {
             InitializeComponent();
+
+            if (ConfigurationManager.AppSettings["epiEnvironment"].ToString().Contains("TEST"))
+                this.TitleText = "Devoluciones MAC TEST";
+            else
+                this.TitleText = "Devoluciones MAC";
+
             appVersion.Text = "v2.0.1";
         }
 
