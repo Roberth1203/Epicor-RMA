@@ -67,7 +67,7 @@
             this.groupBoxAcciones = new System.Windows.Forms.GroupBox();
             this.btnReporteTarimas = new DevComponents.DotNetBar.ButtonX();
             this.btnCierreTurno = new DevComponents.DotNetBar.ButtonX();
-            this.btnRMA = new DevComponents.DotNetBar.ButtonX();
+            this.btnEventProcess = new DevComponents.DotNetBar.ButtonX();
             this.btnCorte = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.panelAwaitAsync = new System.Windows.Forms.Panel();
@@ -563,7 +563,7 @@
             this.groupBoxAcciones.BackColor = System.Drawing.Color.Transparent;
             this.groupBoxAcciones.Controls.Add(this.btnReporteTarimas);
             this.groupBoxAcciones.Controls.Add(this.btnCierreTurno);
-            this.groupBoxAcciones.Controls.Add(this.btnRMA);
+            this.groupBoxAcciones.Controls.Add(this.btnEventProcess);
             this.groupBoxAcciones.Controls.Add(this.btnCorte);
             this.groupBoxAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxAcciones.ForeColor = System.Drawing.Color.Black;
@@ -603,19 +603,19 @@
             this.btnCierreTurno.Text = "Fin de Turno";
             this.btnCierreTurno.Click += new System.EventHandler(this.btnCierreTurno_Click);
             // 
-            // btnRMA
+            // btnEventProcess
             // 
-            this.btnRMA.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnRMA.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnRMA.Enabled = false;
-            this.btnRMA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRMA.Location = new System.Drawing.Point(17, 19);
-            this.btnRMA.Name = "btnRMA";
-            this.btnRMA.Size = new System.Drawing.Size(139, 58);
-            this.btnRMA.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnRMA.TabIndex = 23;
-            this.btnRMA.Text = "Procesar Evento";
-            this.btnRMA.Click += new System.EventHandler(this.btnRMA_Click);
+            this.btnEventProcess.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnEventProcess.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnEventProcess.Enabled = false;
+            this.btnEventProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEventProcess.Location = new System.Drawing.Point(17, 19);
+            this.btnEventProcess.Name = "btnEventProcess";
+            this.btnEventProcess.Size = new System.Drawing.Size(139, 58);
+            this.btnEventProcess.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnEventProcess.TabIndex = 23;
+            this.btnEventProcess.Text = "Procesar Evento";
+            this.btnEventProcess.Click += new System.EventHandler(this.btnEventProcess_Click);
             // 
             // btnCorte
             // 
@@ -1280,7 +1280,6 @@
             // 
             this.listBoxHistorialTurnos.BackgroundStyle.Class = "ListBoxAdv";
             this.listBoxHistorialTurnos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.listBoxHistorialTurnos.CheckStateMember = null;
             this.listBoxHistorialTurnos.ContainerControlProcessDialogKey = true;
             this.listBoxHistorialTurnos.DragDropSupport = true;
             this.listBoxHistorialTurnos.Location = new System.Drawing.Point(3, 30);
@@ -1901,7 +1900,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeFacturasPendientes.Location = new System.Drawing.Point(3, 29);
             this.treeFacturasPendientes.Name = "treeFacturasPendientes";
-            this.treeFacturasPendientes.Size = new System.Drawing.Size(211, 249);
+            this.treeFacturasPendientes.Size = new System.Drawing.Size(211, 234);
             this.treeFacturasPendientes.TabIndex = 2;
             this.treeFacturasPendientes.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeFacturasPendientes_AfterSelect);
             // 
@@ -2870,7 +2869,7 @@
         public System.Windows.Forms.Timer tmrLoader;
         private System.Windows.Forms.DataGridView dgvDetFactura;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvFacturas;
-        private DevComponents.DotNetBar.ButtonX btnRMA;
+        private DevComponents.DotNetBar.ButtonX btnEventProcess;
         private DevComponents.DotNetBar.Controls.RichTextBoxEx txtFacturasProcesadas;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
         private DevComponents.DotNetBar.LabelX labelX2;

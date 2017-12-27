@@ -125,7 +125,7 @@ namespace ControlDevoluciones
             */
         }
 
-        private async void btnRMA_Click(object sender, EventArgs e)
+        private async void btnEventProcess_Click(object sender, EventArgs e)
         {
             try
             {
@@ -441,8 +441,8 @@ namespace ControlDevoluciones
                 btnCorte.Enabled = false;
             if (btnCierreTurno.Enabled == true)
                 btnCierreTurno.Enabled = false;
-            if (btnRMA.Enabled == true)
-                btnRMA.Enabled = false;
+            if (btnEventProcess.Enabled == true)
+                btnEventProcess.Enabled = false;
         }
 
         private async Task generarRMA(List<string> lFactProcesada , DataTable dt, int factura, string legal, int cliente, string folioRelacion, string folioT)
@@ -658,7 +658,7 @@ namespace ControlDevoluciones
         private void listaChoferes_SelectedIndexChanged(object sender, EventArgs e)
         {
             btnObtRelacion.Enabled = true;
-            btnRMA.Enabled = false;
+            btnEventProcess.Enabled = false;
             dgvFacturas.Visible = false;
             /*
             if (dgvFacturas.Columns.Count > 0)
@@ -699,7 +699,7 @@ namespace ControlDevoluciones
                 int index = Convert.ToInt32(dgvFacturas.SelectedCells[0].RowIndex.ToString()); //Obtengo el indice de la fila
                 lblDetallado.Visible = true;
                 dgvDetFactura.Visible = true;
-                btnRMA.Enabled = true;
+                btnEventProcess.Enabled = true;
             }
             catch (System.NullReferenceException isNull)
             {
