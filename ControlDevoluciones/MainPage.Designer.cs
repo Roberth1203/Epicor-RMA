@@ -504,7 +504,7 @@
             this.panelFacturasProcesadas.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.panelFacturasProcesadas.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelFacturasProcesadas.Expanded = false;
-            this.panelFacturasProcesadas.ExpandedBounds = new System.Drawing.Rectangle(897, 235, 337, 421);
+            this.panelFacturasProcesadas.ExpandedBounds = new System.Drawing.Rectangle(900, 9, 337, 624);
             this.panelFacturasProcesadas.ExpandOnTitleClick = true;
             this.panelFacturasProcesadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelFacturasProcesadas.HideControlsWhenCollapsed = true;
@@ -678,7 +678,7 @@
             // 
             this.dgvDetFactura.AllowUserToAddRows = false;
             this.dgvDetFactura.AllowUserToDeleteRows = false;
-            this.dgvDetFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDetFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvDetFactura.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -740,7 +740,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvFacturas.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvFacturas.EnableHeadersVisualStyles = false;
-            this.dgvFacturas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvFacturas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvFacturas.Location = new System.Drawing.Point(293, 127);
             this.dgvFacturas.Name = "dgvFacturas";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -874,7 +874,7 @@
             // 
             // 
             // 
-            this.navigationPane1.TitlePanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.navigationPane1.TitlePanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.navigationPane1.TitlePanel.DisabledBackColor = System.Drawing.Color.Empty;
             this.navigationPane1.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.navigationPane1.TitlePanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -894,7 +894,7 @@
             // 
             // navigationPanePanel2
             // 
-            this.navigationPanePanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.navigationPanePanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.navigationPanePanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.navigationPanePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationPanePanel2.Location = new System.Drawing.Point(1, 25);
@@ -919,7 +919,7 @@
             // 
             // navigationPanePanel3
             // 
-            this.navigationPanePanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.navigationPanePanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.navigationPanePanel3.DisabledBackColor = System.Drawing.Color.Empty;
             this.navigationPanePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationPanePanel3.Location = new System.Drawing.Point(1, 1);
@@ -944,7 +944,7 @@
             // 
             // navigationPanePanel1
             // 
-            this.navigationPanePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.navigationPanePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.navigationPanePanel1.Controls.Add(this.textBoxX14);
             this.navigationPanePanel1.Controls.Add(this.textBoxX13);
             this.navigationPanePanel1.Controls.Add(this.textBoxX12);
@@ -1367,7 +1367,7 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvFacturasTurnosAnteriores.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvFacturasTurnosAnteriores.EnableHeadersVisualStyles = false;
-            this.dgvFacturasTurnosAnteriores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvFacturasTurnosAnteriores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvFacturasTurnosAnteriores.Location = new System.Drawing.Point(3, 30);
             this.dgvFacturasTurnosAnteriores.Name = "dgvFacturasTurnosAnteriores";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1786,7 +1786,7 @@
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDetalleRMA_c.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvDetalleRMA_c.EnableHeadersVisualStyles = false;
-            this.dgvDetalleRMA_c.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvDetalleRMA_c.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvDetalleRMA_c.Location = new System.Drawing.Point(20, 176);
             this.dgvDetalleRMA_c.Name = "dgvDetalleRMA_c";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1900,7 +1900,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeFacturasPendientes.Location = new System.Drawing.Point(3, 29);
             this.treeFacturasPendientes.Name = "treeFacturasPendientes";
-            this.treeFacturasPendientes.Size = new System.Drawing.Size(211, 234);
+            this.treeFacturasPendientes.Size = new System.Drawing.Size(211, 204);
             this.treeFacturasPendientes.TabIndex = 2;
             this.treeFacturasPendientes.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeFacturasPendientes_AfterSelect);
             // 
@@ -2326,7 +2326,7 @@
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDetalleRMA.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvDetalleRMA.EnableHeadersVisualStyles = false;
-            this.dgvDetalleRMA.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvDetalleRMA.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvDetalleRMA.Location = new System.Drawing.Point(234, 173);
             this.dgvDetalleRMA.Name = "dgvDetalleRMA";
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

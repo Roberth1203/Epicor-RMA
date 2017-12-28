@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlDevoluciones.exe" size="2185728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlDevoluciones.exe" size="2181120">
       <assemblyIdentity name="ControlDevoluciones" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pN23z4r3gJ8Dvl/g0fRJZXPooCZbY7LJ1hDcazpHILw=</dsig:DigestValue>
+        <dsig:DigestValue>pgBgBPJvwgBA1vVQK49HcWIS90WvMBoCRSHohRe9AvY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -139,18 +139,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es-MX\Epicor.ServiceModel.resources.dll" size="8704">
-      <assemblyIdentity name="Epicor.ServiceModel.resources" version="3.0.7.0" publicKeyToken="5D3FA3C7105D7992" language="es-MX" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Jr1YSXMDu8z0wXXRDRxkwCMG+/pGDB0JC32uhQJX0N8=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EpicorAdapters.dll" size="21504">
       <assemblyIdentity name="EpicorAdapters" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -158,7 +146,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qFSXYhpK7TXquStJ+inP2FJk+3Fh40KL476zmbenPaY=</dsig:DigestValue>
+        <dsig:DigestValue>dy/O8NsROYACnBDV/AvtQk7Qp33k1spsP+awAmnPHzQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -183,18 +171,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>kxaA8ICbPqiNl3Aim1tRt6oIEa/GKeRFaklv/tDP8Hc=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es-MX\Erp.Contracts.BO.ARInvoice.resources.dll" size="145408">
-      <assemblyIdentity name="Erp.Contracts.BO.ARInvoice.resources" version="10.0.700.0" publicKeyToken="5D3FA3C7105D7992" language="es-MX" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Y2t0q8eZj2ZpeZ5uQKTuR+Irc08TlxDCtESggrUvbOQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -319,18 +295,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es-MX\Ice.Lib.Deployment.resources.dll" size="6656">
-      <assemblyIdentity name="Ice.Lib.Deployment.resources" version="3.0.7.0" publicKeyToken="5D3FA3C7105D7992" language="es-MX" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sffGLbVEeNwv3q2UCAJK+LKGfO6GGm6Xm0e/iPy6ex4=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="itextsharp.dll" size="4059136">
       <assemblyIdentity name="itextsharp" version="5.5.10.0" publicKeyToken="8354AE6D2174DDCA" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -422,17 +386,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IZF3/bIseOnJBv79FGccMP8LPv1/yxA8S4BxXzntIzY=</dsig:DigestValue>
+        <dsig:DigestValue>dkeuju+cUdiuU2wRK2vKYQ2z5cGnrSAYDfGlxbAjNDM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ControlDevoluciones.exe.config" size="5987">
+  <file name="ControlDevoluciones.exe.config" size="5974">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>k+yq6py65oS8FD/vESzBOQWXLwHdKIi8VDRgOBlaaAw=</dsig:DigestValue>
+      <dsig:DigestValue>Ep8uFd/DNP5qchozy/mMMN2oSmelKvaMptcy+45m5i4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="if_shipping_87467.ico" size="160820">

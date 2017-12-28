@@ -2,11 +2,8 @@
 using System.Data;
 using System.Configuration;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Utilities;
-using System.Windows.Forms;
 
 namespace ControlDevoluciones
 {
@@ -16,14 +13,16 @@ namespace ControlDevoluciones
         public DataTable dtFacturas = new DataTable();
         SQLUtilities sql = new SQLUtilities();
 
-        public async Task<DataTable> obtEventDtl(string evento, string EpiConnection)
+        public async Task<DataTable> LinesToDetail(string evento, string EpiConnection)
         {
+            DataTable dtEventRows = new DataTable();
+            DataTable dtFilterRows = new DataTable();
             try
             {
-                sql.getRecords(String.Format("SELECT DistrDev,FolioRelacion,NumeroCliente FROM dbo.MS_DevChfrs_tst",evento),null,EpiConnection);
-                return dtFacturas;
+                dtEventRows = sql.getRecords(String.Format("SELECT r.Facturas,''  AS Linea,r.IdProducto,''  AS Descripcion,''  AS Empaque,''  AS LineaE,r.motivodevolucion,''  AS Orden,''  AS LineaO,''  AS Relacion,r.DistrDev,r.unidad,r.DistrClsf,r.Observaciones,r.ZoneID,r.PrimBin FROM ERP10DB.dbo.MS_DevChfrs_tst r WHERE Evento_Key = '{0}' ORDER BY r.IdProducto, r.Facturas;",evento),null,EpiConnection);
+                return dtEventRows;
             }
-            catch (Exception) { return dtFacturas; }
+            catch (Exception) { return dtEventRows; }
         }
 
         public async Task<DataTable> obtenerFacturas(string EventKey, string EpiConnection)
@@ -226,7 +225,8 @@ namespace ControlDevoluciones
             }
         }
 
-        public async Task<DataTable> getInvoiceDtl(Int32 lineaFactura, string EpiConnection, string currentInvoice)
+        //public async Task<DataTable> getInvoiceDtl(Int32 lineaFactura, string EpiConnection, string currentInvoice)
+        public async Task<DataTable> getInvoiceDtl(DataTable InvoiceLines, string EpiConnection, string currentInvoice)
         {
             catcher = String.Empty;
             Boolean firstExist = true;
@@ -236,9 +236,10 @@ namespace ControlDevoluciones
             {
                 int x = 0, totalRows = 0;
                 char[] separadores = {':',','};
-                int invoiceHead = Convert.ToInt32(dtFacturas.Rows[lineaFactura].ItemArray[0]);
-                string script = String.Format(ConfigurationManager.AppSettings["obtInvoiceDetail"].ToString(), invoiceHead);
-                dtLineasDev = sql.getRecords(script, null, EpiConnection);
+                //int invoiceHead = Convert.ToInt32(dtFacturas.Rows[lineaFactura].ItemArray[0]);
+                //string script = String.Format(ConfigurationManager.AppSettings["obtInvoiceDetail"].ToString(), invoiceHead);
+                //dtLineasDev = sql.getRecords(script, null, EpiConnection);
+                dtLineasDev = InvoiceLines;
                 totalRows = dtLineasDev.Rows.Count;
                 
                 do

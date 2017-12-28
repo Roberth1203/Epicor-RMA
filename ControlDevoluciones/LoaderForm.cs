@@ -20,8 +20,8 @@ namespace ControlDevoluciones
 
         private void LoaderForm_Load(object sender, EventArgs e)
         {
-            timer1.Interval = 100;
-            timer1.Start();
+            //timer1.Interval = 100;
+            //timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
