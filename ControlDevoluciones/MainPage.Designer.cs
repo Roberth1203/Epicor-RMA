@@ -60,7 +60,6 @@
             this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
             this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.elementStyle3 = new DevComponents.DotNetBar.ElementStyle();
-            this.btnObtRelacion = new DevComponents.DotNetBar.ButtonX();
             this.panelFacturasProcesadas = new DevComponents.DotNetBar.ExpandablePanel();
             this.txtFacturasProcesadas = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.gifSearchInvc = new System.Windows.Forms.PictureBox();
@@ -380,7 +379,6 @@
             this.superTabControlPanel1.CanvasColor = System.Drawing.Color.Transparent;
             this.superTabControlPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
             this.superTabControlPanel1.Controls.Add(this.advTreeDrivers);
-            this.superTabControlPanel1.Controls.Add(this.btnObtRelacion);
             this.superTabControlPanel1.Controls.Add(this.panelFacturasProcesadas);
             this.superTabControlPanel1.Controls.Add(this.gifSearchInvc);
             this.superTabControlPanel1.Controls.Add(this.groupBoxAcciones);
@@ -481,21 +479,6 @@
             this.elementStyle3.PaddingTop = 1;
             this.elementStyle3.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(83)))), ((int)(((byte)(2)))));
             // 
-            // btnObtRelacion
-            // 
-            this.btnObtRelacion.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnObtRelacion.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnObtRelacion.Enabled = false;
-            this.btnObtRelacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObtRelacion.ImageFixedSize = new System.Drawing.Size(64, 0);
-            this.btnObtRelacion.Location = new System.Drawing.Point(1055, 332);
-            this.btnObtRelacion.Name = "btnObtRelacion";
-            this.btnObtRelacion.Size = new System.Drawing.Size(139, 57);
-            this.btnObtRelacion.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnObtRelacion.TabIndex = 2;
-            this.btnObtRelacion.Text = "Obtener Devoluciones";
-            this.btnObtRelacion.Click += new System.EventHandler(this.btnObtRelacion_Click);
-            // 
             // panelFacturasProcesadas
             // 
             this.panelFacturasProcesadas.CanvasColor = System.Drawing.SystemColors.Control;
@@ -504,14 +487,14 @@
             this.panelFacturasProcesadas.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.panelFacturasProcesadas.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelFacturasProcesadas.Expanded = false;
-            this.panelFacturasProcesadas.ExpandedBounds = new System.Drawing.Rectangle(900, 9, 337, 624);
+            this.panelFacturasProcesadas.ExpandedBounds = new System.Drawing.Rectangle(758, 9, 479, 647);
             this.panelFacturasProcesadas.ExpandOnTitleClick = true;
             this.panelFacturasProcesadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelFacturasProcesadas.HideControlsWhenCollapsed = true;
             this.panelFacturasProcesadas.Location = new System.Drawing.Point(1211, 9);
             this.panelFacturasProcesadas.Name = "panelFacturasProcesadas";
             this.panelFacturasProcesadas.ScrollBarAppearance = DevComponents.DotNetBar.eScrollBarAppearance.ApplicationScroll;
-            this.panelFacturasProcesadas.Size = new System.Drawing.Size(26, 624);
+            this.panelFacturasProcesadas.Size = new System.Drawing.Size(26, 647);
             this.panelFacturasProcesadas.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelFacturasProcesadas.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelFacturasProcesadas.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
@@ -543,16 +526,16 @@
             this.txtFacturasProcesadas.Name = "txtFacturasProcesadas";
             this.txtFacturasProcesadas.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang2058{\\fonttbl{\\f0\\fnil\\fcharset0 Microsoft S" +
     "ans Serif;}}\r\n\\viewkind4\\uc1\\pard\\b\\f0\\fs20\\par\r\n}\r\n";
-            this.txtFacturasProcesadas.Size = new System.Drawing.Size(19, 593);
+            this.txtFacturasProcesadas.Size = new System.Drawing.Size(19, 616);
             this.txtFacturasProcesadas.TabIndex = 4;
             // 
             // gifSearchInvc
             // 
             this.gifSearchInvc.BackColor = System.Drawing.Color.Transparent;
             this.gifSearchInvc.Image = ((System.Drawing.Image)(resources.GetObject("gifSearchInvc.Image")));
-            this.gifSearchInvc.Location = new System.Drawing.Point(293, 127);
+            this.gifSearchInvc.Location = new System.Drawing.Point(293, 154);
             this.gifSearchInvc.Name = "gifSearchInvc";
-            this.gifSearchInvc.Size = new System.Drawing.Size(654, 186);
+            this.gifSearchInvc.Size = new System.Drawing.Size(654, 159);
             this.gifSearchInvc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.gifSearchInvc.TabIndex = 0;
             this.gifSearchInvc.TabStop = false;
@@ -718,7 +701,7 @@
             this.dgvFacturas.AllowUserToAddRows = false;
             this.dgvFacturas.AllowUserToDeleteRows = false;
             this.dgvFacturas.AllowUserToOrderColumns = true;
-            this.dgvFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvFacturas.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -922,10 +905,10 @@
             this.navigationPanePanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.navigationPanePanel3.DisabledBackColor = System.Drawing.Color.Empty;
             this.navigationPanePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanePanel3.Location = new System.Drawing.Point(1, 1);
+            this.navigationPanePanel3.Location = new System.Drawing.Point(1, 25);
             this.navigationPanePanel3.Name = "navigationPanePanel3";
             this.navigationPanePanel3.ParentItem = this.btnOpcOther;
-            this.navigationPanePanel3.Size = new System.Drawing.Size(1221, 500);
+            this.navigationPanePanel3.Size = new System.Drawing.Size(1221, 476);
             this.navigationPanePanel3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanel3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.navigationPanePanel3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
@@ -1900,7 +1883,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeFacturasPendientes.Location = new System.Drawing.Point(3, 29);
             this.treeFacturasPendientes.Name = "treeFacturasPendientes";
-            this.treeFacturasPendientes.Size = new System.Drawing.Size(211, 204);
+            this.treeFacturasPendientes.Size = new System.Drawing.Size(211, 84);
             this.treeFacturasPendientes.TabIndex = 2;
             this.treeFacturasPendientes.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeFacturasPendientes_AfterSelect);
             // 
@@ -2549,10 +2532,10 @@
             this.tabControlPanel3.Controls.Add(this.labelX7);
             this.tabControlPanel3.DisabledBackColor = System.Drawing.Color.Empty;
             this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tabControlPanel3.Location = new System.Drawing.Point(0, 26);
             this.tabControlPanel3.Name = "tabControlPanel3";
             this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel3.Size = new System.Drawing.Size(1217, 587);
+            this.tabControlPanel3.Size = new System.Drawing.Size(1217, 561);
             this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
             this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
             this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -2661,10 +2644,10 @@
             this.tabControlPanel2.Controls.Add(this.labelX9);
             this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
             this.tabControlPanel2.Name = "tabControlPanel2";
             this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(1217, 587);
+            this.tabControlPanel2.Size = new System.Drawing.Size(1217, 561);
             this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
             this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
             this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -2859,7 +2842,6 @@
         #endregion
 
         private DevComponents.DotNetBar.Ribbon.RibbonClientPanel ribbonClientPanel1;
-        private DevComponents.DotNetBar.ButtonX btnObtRelacion;
         private DevComponents.DotNetBar.ExpandablePanel panelFacturasProcesadas;
         private DevComponents.DotNetBar.SuperTabControl superTabControl1;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel1;

@@ -86,7 +86,7 @@ namespace EpicorAdapters
             }
         }
 
-        public async Task RMAheader(int CustNum,int InvoiceNum,string legalNumber,string FolioRelacion,string FolioTurno)
+        public async Task RMAheader(int CustNum,int InvoiceNum,string legalNumber,string FolioRelacion,string FolioTurno, string multiEvent)
         {
             try
             {
@@ -111,6 +111,7 @@ namespace EpicorAdapters
                     dt.Tables["RMAHead"].Rows[0]["LegalNumber"] = legalNumber;
                     dt.Tables["RMAHead"].Rows[0]["FolioRelacion_c"] = FolioRelacion;
                     dt.Tables["RMAHead"].Rows[0]["FolioPalet_c"] = FolioTurno;
+                    dt.Tables["RMAHead"].Rows[0]["EventoKey_c"] = multiEvent;
 
                     OB.Update(dt);
                 }

@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlDevoluciones.exe" size="2181120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlDevoluciones.exe" size="2183168">
       <assemblyIdentity name="ControlDevoluciones" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pgBgBPJvwgBA1vVQK49HcWIS90WvMBoCRSHohRe9AvY=</dsig:DigestValue>
+        <dsig:DigestValue>AFlRkmjwmBvtKcS6q+5BC11hAmnDWdLJNtNOCi+N53M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -146,7 +146,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dy/O8NsROYACnBDV/AvtQk7Qp33k1spsP+awAmnPHzQ=</dsig:DigestValue>
+        <dsig:DigestValue>qNTx0qqV7bg+6LNrBtEev2Heu/3bJDtd69OUbEMt/X0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -386,17 +386,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dkeuju+cUdiuU2wRK2vKYQ2z5cGnrSAYDfGlxbAjNDM=</dsig:DigestValue>
+        <dsig:DigestValue>snGamtatrqRaaursrk0APQxdSfJBIZHQMnqhTn9T2I4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ControlDevoluciones.exe.config" size="5974">
+  <file name="ControlDevoluciones.exe.config" size="5987">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Ep8uFd/DNP5qchozy/mMMN2oSmelKvaMptcy+45m5i4=</dsig:DigestValue>
+      <dsig:DigestValue>k+yq6py65oS8FD/vESzBOQWXLwHdKIi8VDRgOBlaaAw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="if_shipping_87467.ico" size="160820">

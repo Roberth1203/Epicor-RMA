@@ -19,6 +19,7 @@ namespace ControlDevoluciones
     public partial class PantallaPrincipal : Form
     {
         FileManager file;
+        LoadInitData data;
         SQLUtilities util = new SQLUtilities();
         Orchestador functions = new Orchestador();
         Config conf = new Config();
@@ -69,7 +70,7 @@ namespace ControlDevoluciones
 
         private async void tmrLoader_Tick(object sender, EventArgs e)
         {
-            LoadInitData data = new LoadInitData();
+            data = new LoadInitData();
             tmrLoader.Stop();
             data.Show();
             await Task.Factory.StartNew(async () =>
@@ -166,6 +167,10 @@ namespace ControlDevoluciones
                 LoaderForm loading = new LoaderForm();
                 loading.Show();
 
+                // Se asigna el turno al usuario y se impide el cierre de tarimas o turno en el proceso de RMA's
+                obtFolioProceso();
+                disableButtons();
+
                 await Task.Factory.StartNew(async () =>
                 {
                     EventRecords = await functions.LinesToDetail(varEventoID, conEpicor);
@@ -175,151 +180,77 @@ namespace ControlDevoluciones
                 {
                     DataRow[] rows = EventRecords.Select(String.Format("Facturas LIKE '%{0}%'",dtEventRows.Rows[i].ItemArray[0].ToString()));
                     tmp = rows.CopyToDataTable();
-                    
+
+                    /* ******************************************* */
+                    /* Obtencion de datos de la factura a procesar */
+                    /* ******************************************* */
                     await Task.Factory.StartNew(async () =>
                     {
                         dtPrint = await functions.getInvoiceDtl(tmp, conEpicor, dtEventRows.Rows[i].ItemArray[0].ToString());
                     }).Unwrap();
 
-                    dgvDetFactura.DataSource = dtPrint;
-                    dgvDetFactura.Visible = true;
+                    if (functions.catcher.Equals(""))
+                    {
+                        txtFacturasProcesadas.Text += "Se otuvieron las líneas a devolver.\n";
+                        txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
+                        dgvDetFactura.DataSource = dtPrint;
+                        dgvDetFactura.Visible = true;
+                    }
+                    else
+                    {
+                        txtFacturasProcesadas.Text += "Ocurrió un problema al obtener las líneas de la factura. " + functions.catcher + "\n";
+                        txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
+                    }
+
+                    /* ******************************************* */
+                    /* Creación del log de la relacion de cobranza */
+                    /* ******************************************* */
+                    string folioRelacion = dtEventRows.Rows[i].ItemArray[4].ToString();
+                    file.createLog(folioRelacion);
+                    file.writeContentToFile("\n");
+                    file.writeContentToFile(String.Format("\nComienza la generación de RMA para la factura: {0} ", dtEventRows.Rows[i].ItemArray[0].ToString()));
+                    txtFacturasProcesadas.Text += String.Format("Comienza la generación de RMA para la factura: {0}\n", dtEventRows.Rows[i].ItemArray[0].ToString());
+                    panelAwaitAsync.Visible = true;
+                    char[] separadores = { ',', ' ' };
+
+                    await Task.Factory.StartNew(async () =>
+                    {
+                        await generarRMA(dtPrint, Convert.ToInt32(dtEventRows.Rows[i][0]), dtEventRows.Rows[i][1].ToString().Trim(separadores), Convert.ToInt32(Regex.Replace(dtEventRows.Rows[i][2].ToString(), @"[^\d]", "", RegexOptions.None, TimeSpan.FromSeconds(1.5))), dtEventRows.Rows[i][4].ToString(), idSesion[1], Convert.ToInt32(dtEventRows.Rows[i][3]), varEventoID);
+                    }).Unwrap();
+
+                    txtFacturasProcesadas.Text += recolectorEventos + "\n";
+                    panelAwaitAsync.Visible = false;
+
                     i++;
                 }
 
                 loading.Close();
+
+                /* ********************************************* */
+                /* Actualización de choferes despues del proceso */
+                /* ********************************************* */
+                advTreeDrivers.Nodes.Clear();
+                dgvFacturas.Visible = false;
+                dgvDetFactura.Visible = false;
+                data = new LoadInitData();
+                data.Show();
+                await Task.Factory.StartNew(async () =>
+                {
+                    await fillAdvTree();
+                }).Unwrap();
+                data.Close();
+
+                // Habilitado de botones para cerrar tarimas y turno
+                if (btnCierreTurno.Enabled == false)
+                {
+                    btnCierreTurno.Enabled = true;
+                    btnCorte.Enabled = true;
+                }
             }
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
             }
-            //try
-            //{
-            //    file = new FileManager();
-            //    LoaderForm loader = new LoaderForm();
-            //    loader.ShowDialog(); // Presentación de form Loader (Petición a epicor)
-            //    obtFolioProceso(); // Obtener folio de turno y folios de tarimas
-            //    disableButtons();
-            //    panelAwaitAsync.Visible = true;
-
-            //    DataTable dtLineasDevolucion = new DataTable();
-            //    int ind = 0;
-            //    foreach (DataGridViewRow row in dgvFacturas.Rows)
-            //    {
-            //        if (Convert.ToBoolean(dgvFacturas.Rows[ind].Cells[0].Value) == true)
-            //        {
-            //            // Obtención del detallado de líneas para la devolución
-            //            selectedRows.Add(ind);
-            //            txtFacturasProcesadas.Text += "Obteniendo lineas de la factura  " + dgvFacturas.Rows[ind].Cells[1].Value.ToString() + "...\n";
-            //            txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-            //            string facturaActual = dgvFacturas.Rows[ind].Cells[1].Value.ToString();
-            //            await Task.Factory.StartNew(async () =>
-            //            {
-            //                dtLineasDevolucion = await functions.getInvoiceDtl(ind, conEpicor, facturaActual);
-            //            }).Unwrap();
-
-            //            if (functions.catcher.Equals(""))
-            //            {
-            //                txtFacturasProcesadas.Text += "Se otuvieron las líneas a devolver.\n";
-            //                txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-            //                dgvDetFactura.DataSource = dtLineasDevolucion;
-            //            }
-            //            else
-            //            {
-            //                txtFacturasProcesadas.Text += "Ocurrió un problema al obtener las líneas de la factura. " + functions.catcher + "\n";
-            //                txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-            //            }
-
-            //            /* Depuración final de las filas para mostrar solo las correspondientes a la factura actual
-            //            int pos = 0;
-            //            foreach (DataGridViewRow w in dgvDetFactura.Rows)
-            //            {
-            //                if (!dgvDetFactura.Rows[pos].Cells[0].Value.ToString().Equals(facturaActual))
-            //                    dgvDetFactura.Rows.Remove(w);
-
-            //                pos++;
-            //            }
-            //            */
-
-            //            string folioRelacion = dgvFacturas.Rows[ind].Cells[5].Value.ToString(); //se obtiene el número de relación para crear el archivo log
-            //            file.createLog(folioRelacion);
-            //            file.writeContentToFile("\n");
-            //            file.writeContentToFile("\nFactura en proceso actual " + dgvFacturas.Rows[ind].Cells[1].Value.ToString());
-
-            //            //Generación de RMA a partir del detallado
-            //            List<string> listDatosFactura = new List<string>();
-
-            //            listDatosFactura.Add(dgvFacturas.Rows[ind].Cells[1].Value.ToString()); // InvoiceNum
-            //            listDatosFactura.Add(dgvFacturas.Rows[ind].Cells[2].Value.ToString()); // Legal Number
-            //            listDatosFactura.Add(dgvFacturas.Rows[ind].Cells[3].Value.ToString()); // CustNum
-            //            listDatosFactura.Add(dgvFacturas.Rows[ind].Cells[4].Value.ToString()); // InvoiceLines
-            //            listDatosFactura.Add(dgvFacturas.Rows[ind].Cells[5].Value.ToString()); // Relathioship
-
-            //            txtFacturasProcesadas.Text += "Comienza la generación de RMA para la factura: " + listDatosFactura[0] + "\n";
-            //            txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-            //            panelAwaitAsync.Visible = true;
-
-            //            char[] separadores = { ',', ' ' };
-
-            //            //MessageBox.Show("Lineas en dtLineasDevolucion: " + dtLineasDevolucion.Rows.Count);
-                        
-            //            await Task.Factory.StartNew(async () =>
-            //            {
-            //                await generarRMA(listDatosFactura, dtLineasDevolucion, Convert.ToInt32(listDatosFactura[0]), listDatosFactura[1].ToString().Trim(separadores), Convert.ToInt32(Regex.Replace(listDatosFactura[2], @"[^\d]", "", RegexOptions.None, TimeSpan.FromSeconds(1.5))), listDatosFactura[4], idSesion[1]);
-            //            }).Unwrap();
-                        
-            //            txtFacturasProcesadas.Text += recolectorEventos + "\n";
-            //            panelAwaitAsync.Visible = false;
-            //        }
-            //        ind++;
-            //    }
-            //    sincronizaFacturas();
-            //    panelAwaitAsync.Visible = false;
-
-            //    DataTable res = new DataTable();
-            //    gifSearchInvc.Visible = true;
-            //    sincronizaFacturas();
-
-            //    txtFacturasProcesadas.Text += "Sincronizando las facturas actuales...\n";
-            //    txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-            //    /*
-            //    await Task.Factory.StartNew(async () =>
-            //    {
-            //        res = await functions.obtenerFacturas(listaChoferes.SelectedItem.ToString(), conEpicor);
-            //    }).Unwrap();
-            //    */
-            //    if (res.Rows.Count > 0)
-            //    {
-            //        dgvFacturas.DataSource = res;
-            //        txtFacturasProcesadas.Text += "Facturas pendientes obtenidas correctamente. \n";
-            //        txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-            //    }
-            //    else
-            //    {
-            //        txtFacturasProcesadas.Text += "No se encontró ninguna factura para el chofer seleccionado.\n";
-            //        txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-            //    }
-
-            //    //ToastNotification.DefaultToastGlowColor = eToastGlowColor.Red;
-            //    ToastNotification.DefaultToastPosition = eToastPosition.MiddleCenter;
-            //    ToastNotification.Show(this, "Facturas sincronizadas correctamente", 2000);
-
-            //    dgvFacturas.Visible = true;
-                
-            //    gifSearchInvc.Visible = false;
-
-
-            //    //
-            //    //obtenerFacturas();
-            //    panelFacturasProcesadas.Expanded = true;
-            //    btnCorte.Enabled = true;
-            //    btnCierreTurno.Enabled = true;
-            //}
-            //catch (Exception x)
-            //{
-            //    txtFacturasProcesadas.Text += "Ocurrió un problema al tratar de procesar la(s) factura(s) seleccionada(s) =>  " + x.Message + "\n";
-            //    txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-            //}
-            
         }
 
         private void btnCorte_Click(object sender, EventArgs e)
@@ -510,7 +441,7 @@ namespace ControlDevoluciones
                 btnEventProcess.Enabled = false;
         }
 
-        private async Task generarRMA(List<string> lFactProcesada , DataTable dt, int factura, string legal, int cliente, string folioRelacion, string folioT)
+        private async Task generarRMA(DataTable dt, int factura, string legal, int cliente, string folioRelacion, string folioT, int lineasFactura, string evento)
         {
             try
             {
@@ -526,14 +457,14 @@ namespace ControlDevoluciones
 
                 if (parseRMANum == 0)
                 {
-                    await epiAdapter.RMAheader(cliente, factura, legal, folioRelacion, folioT);
+                    await epiAdapter.RMAheader(cliente, factura, legal, folioRelacion, folioT, evento);
                     recolectorEventos += epiAdapter.recolector + "\n";
                     //Una vez creado el encabezado lo devuelvo para la revisión del encabezado
                     DataTable obtainRMAHead = util.getRecords(String.Format(ConfigurationManager.AppSettings["consultarRMA"], cliente, factura), null, conEpicor);
                     RMA = (obtainRMAHead.Rows.Count == 0) ? 0 : Convert.ToInt32(obtainRMAHead.Rows[0].ItemArray[0].ToString());
 
                     file.writeContentToFile(String.Format(epiAdapter.recolector, RMA));
-                    sqlQuery = String.Format("INSERT INTO tb_FactProc(FactNum,NumeroLegal,Cliente,Lineas,Relacion,Status,UsuarioCaptura,FechaCaptura) VALUES({0},'{1}','{2}',{3},'{4}',{5},'{6}',{7});", lFactProcesada[0], lFactProcesada[1], lFactProcesada[2], lFactProcesada[3], lFactProcesada[4], "2", epiUser.ToUpper(), "GETDATE()");
+                    sqlQuery = String.Format("INSERT INTO tb_FactProc(FactNum,NumeroLegal,Cliente,Lineas,Relacion,Status,UsuarioCaptura,FechaCaptura) VALUES({0},'{1}','{2}',{3},'{4}',{5},'{6}',{7});", factura, legal, cliente, lineasFactura, folioRelacion, "2", epiUser.ToUpper(), "GETDATE()");
                     util.SQLstatement(sqlQuery, TISERVER, null);
                 }
                 else
@@ -644,7 +575,9 @@ namespace ControlDevoluciones
                 file.writeContentToFile(epiAdapter.recolector);
 
                 //Terminada la RMA se actualiza el status de la factura en la BD Devoluciones
-                sqlQuery = String.Format("UPDATE tb_FactProc SET Status = 1 WHERE FactNum = {0};", lFactProcesada[0]);
+
+                Console.WriteLine("Valor factura: " + factura + "\nValor RMA: " + RMA);
+                sqlQuery = String.Format("UPDATE tb_FactProc SET Status = 1 WHERE FactNum = {0};", factura);
                 util.SQLstatement(sqlQuery,TISERVER,null);
                 ReasonsList.Clear();
                 recolectorEventos += "Factura " + factura + " procesada en la RMA: " + RMA + "\n";
@@ -658,15 +591,19 @@ namespace ControlDevoluciones
             {
                 recolectorEventos += "Se capturó la siguiente excepción al procesa la factura " + factura + ": " + RMANotFound.Message + "\n";
                 file.writeContentToFile("Se capturó la siguiente excepción: " + RMANotFound.Message);
-                string sql = String.Format("UPDATE tb_FactProc SET Status = 3 WHERE FactNum = {0};", lFactProcesada[0]);
+                string sql = String.Format("UPDATE tb_FactProc SET Status = 3 WHERE FactNum = {0};", factura);
                 util.SQLstatement(sql, TISERVER, null);
                 ReasonsList.Clear();
-            }
+            }/*
+            catch (System.NullReferenceException nulo)
+            {
+
+            }*/
             catch (Exception isBug)
             {
                 recolectorEventos += "Se capturó la siguiente excepción al procesa la factura " + factura + ": " + isBug.Message;
                 file.writeContentToFile("Excepción capturada " + isBug.Message);
-                string sql = String.Format("UPDATE tb_FactProc SET Status = 3 WHERE FactNum = {0};", lFactProcesada[0]);
+                string sql = String.Format("UPDATE tb_FactProc SET Status = 3 WHERE FactNum = {0};", factura);
                 util.SQLstatement(sql, TISERVER, null);
                 ReasonsList.Clear();
             }
@@ -722,7 +659,6 @@ namespace ControlDevoluciones
 
         private void listaChoferes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnObtRelacion.Enabled = true;
             btnEventProcess.Enabled = false;
             dgvFacturas.Visible = false;
             /*
@@ -1205,21 +1141,6 @@ namespace ControlDevoluciones
                 MessageBox.Show(e.Message);
             }
         }
-
-        private async Task<DataTable> getRowsByEvent(string Event)
-        {
-            DataTable DBrecords = util.getRecords(String.Format("SELECT * FROM dbo.MS_DevChfrs_tst Where Evento_Key = '{0}'", Event), null, conEpicor);
-            DataRow[] returnedRows;
-
-            returnedRows = DBrecords.Select(String.Format("Evento_Key = '{0}'", Event));
-            for (int x = 0; x < returnedRows.Length; x++)
-            {
-                MessageBox.Show("Factura: " + returnedRows[x][5]);
-            }
-
-            DataTable filterResult = returnedRows.CopyToDataTable();
-
-            return filterResult;
-        }
+        
     }
 }
