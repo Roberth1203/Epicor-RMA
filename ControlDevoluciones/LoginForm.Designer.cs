@@ -130,10 +130,11 @@ namespace ControlDevoluciones
             // 
             // cargando
             // 
+            this.cargando.BackColor = System.Drawing.Color.Transparent;
             this.cargando.Image = ((System.Drawing.Image)(resources.GetObject("cargando.Image")));
-            this.cargando.Location = new System.Drawing.Point(87, 95);
+            this.cargando.Location = new System.Drawing.Point(81, 97);
             this.cargando.Name = "cargando";
-            this.cargando.Size = new System.Drawing.Size(249, 68);
+            this.cargando.Size = new System.Drawing.Size(255, 54);
             this.cargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cargando.TabIndex = 7;
             this.cargando.TabStop = false;
@@ -161,11 +162,11 @@ namespace ControlDevoluciones
             this.Controls.Add(this.appVersion);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.cargando);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.btnStartSession);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
+            this.Controls.Add(this.cargando);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

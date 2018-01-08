@@ -212,7 +212,7 @@ namespace ControlDevoluciones
                     string folioRelacion = dtEventRows.Rows[i].ItemArray[4].ToString();
                     file.createLog(folioRelacion);
                     file.writeContentToFile("\n");
-                    file.writeContentToFile(String.Format("\nComienza la generación de RMA para la factura: {0} ", dtEventRows.Rows[i].ItemArray[0].ToString()));
+                    file.writeContentToFile(String.Format("\n[ {1} ] - Comienza la generación de RMA para la factura: {0} ", dtEventRows.Rows[i].ItemArray[0].ToString(), System.DateTime.Now));
                     txtFacturasProcesadas.Text += String.Format("Comienza la generación de RMA para la factura: {0}\n", dtEventRows.Rows[i].ItemArray[0].ToString());
                     panelAwaitAsync.Visible = true;
                     char[] separadores = { ',', ' ' };
@@ -467,14 +467,14 @@ namespace ControlDevoluciones
                     DataTable obtainRMAHead = util.getRecords(String.Format(ConfigurationManager.AppSettings["consultarRMA"], cliente, factura), null, conEpicor);
                     RMA = (obtainRMAHead.Rows.Count == 0) ? 0 : Convert.ToInt32(obtainRMAHead.Rows[0].ItemArray[0].ToString());
 
-                    file.writeContentToFile(String.Format(epiAdapter.recolector, RMA));
+                    file.writeContentToFile(String.Format("[ {1} ] - " + epiAdapter.recolector, RMA, System.DateTime.Now));
                     sqlQuery = String.Format("INSERT INTO tb_FactProc(FactNum,NumeroLegal,Cliente,Lineas,Relacion,Status,UsuarioCaptura,FechaCaptura) VALUES({0},'{1}','{2}',{3},'{4}',{5},'{6}',{7});", factura, legal, cliente, lineasFactura, folioRelacion, "2", epiUser.ToUpper(), "GETDATE()");
                     util.SQLstatement(sqlQuery, TISERVER, null);
                 }
                 else
                 {
                     recolectorEventos += "Se encontró la RMA " + parseRMANum + " abierta, se agregaran las líneas en su detallado \n";
-                    file.writeContentToFile("Se encontró la RMA " + parseRMANum + " abierta, se agregaran las líneas en su detallado.");
+                    file.writeContentToFile(String.Format("[ {0} ] - Se encontró la RMA " + parseRMANum + " abierta, se agregaran las líneas en su detallado.", System.DateTime.Now));
                     RMA = parseRMANum;
                     // Si ya existe RMA abierta, se obtiene el número de líneas cargadas actualmente
                     DataTable numRMALines = util.getRecords(String.Format("SELECT COUNT(*) FROM Erp.RMADtl WHERE RMANum = {0};", parseRMANum), null, conEpicor);
@@ -495,7 +495,7 @@ namespace ControlDevoluciones
                     int relOrden = Convert.ToInt32(dt.Rows[ind2].ItemArray[9]);
                     double cant = Convert.ToDouble(dt.Rows[ind2].ItemArray[10]);
                     string UOM = dt.Rows[ind2].ItemArray[11].ToString();
-                    
+
                     string ubicacion = dt.Rows[ind2].ItemArray[12].ToString();
                     string comentarios = "Ruta y Unidad " + dt.Rows[ind2].ItemArray[13].ToString() + ", Área Responsable: " + await areaResponsable(razon);
                     string zona = dt.Rows[ind2].ItemArray[14].ToString();
@@ -520,7 +520,7 @@ namespace ControlDevoluciones
                         int lineaRMA = existencia + 1;
                         string tarimaDest = await definirTarimaDestino(ubicacion, zona);
                         epiAdapter.RMANewLine(RMA, lineaRMA, legal, factura, lineaFactura, numOrden, lineaOrden, relOrden, parte, desc, razon, cant, UOM, customer, comentarios, almacen, ubicacion, tarimaDest, primbin);
-                        
+
                         try
                         {
                             util.SQLstatement(String.Format("INSERT INTO tb_FactDtl(FactNum,FactLine,PartNum,LineDesc,PackNum,PackLine,ReturnReason,OrderNum,OrderLine,OrderRel,ReturnQty,QtyUOM,PartClass,Note,ZoneID,PrimBin) VALUES({0},{1},'{2}','{3}',{4},{5},'{6}',{7},{8},{9},{10},'{11}','{12}','{13}','{14}','{15}');", factura, lineaFactura, parte, desc, Pack, PackLine, razon, numOrden, lineaOrden, relOrden, cant, UOM, ubicacion, comentarios, zona, primbin), TISERVER, null);
@@ -535,7 +535,7 @@ namespace ControlDevoluciones
                         }
 
                         recolectorEventos += epiAdapter.recolector + "\n";
-                        file.writeContentToFile(epiAdapter.recolector);
+                        file.writeContentToFile(String.Format("[ {0} ] - " + epiAdapter.recolector, System.DateTime.Now));
                         ReasonsList.Add(razon.Substring(0, 5)); // Se almacena el motivo de devolucion de la línea actual
                         existencia++;
 
@@ -566,35 +566,35 @@ namespace ControlDevoluciones
                     else
                     {
                         recolectorEventos += "La cantidad de la parte " + parte + " debe ser mayor a cero, no se agregará a la RMA.\n";
-                        file.writeContentToFile("La cantidad de la parte " + parte + " debe ser mayor a cero, no se agregará a la RMA.");
+                        file.writeContentToFile(String.Format("[ {0} ] - La cantidad de la parte " + parte + " debe ser mayor a cero, no se agregará a la RMA.", System.DateTime.Now));
                     }
                     ind2++;
                 }
 
                 int currentRMANum = epiAdapter.getRMANum(cliente, factura); //Se obtiene la RMA creada y se pasa al armado de la disposición
                 epiAdapter.armaRMADisp(currentRMANum, ReasonsList); // Disposición de líneas de la RMA
-                file.writeContentToFile(epiAdapter.recolector);
+                file.writeContentToFile(String.Format("[ {0} ] - " + epiAdapter.recolector, System.DateTime.Now));
 
                 epiAdapter.changeDocType(epiAdapter.CMreturn); // Cambio de tipo de documento en Nota de Crédito
-                file.writeContentToFile(epiAdapter.recolector);
+                file.writeContentToFile(String.Format("[ {0} ] - " + epiAdapter.recolector, System.DateTime.Now));
 
                 //Terminada la RMA se actualiza el status de la factura en la BD Devoluciones
 
                 Console.WriteLine("Valor factura: " + factura + "\nValor RMA: " + RMA);
                 sqlQuery = String.Format("UPDATE tb_FactProc SET Status = 1 WHERE FactNum = {0};", factura);
-                util.SQLstatement(sqlQuery,TISERVER,null);
+                util.SQLstatement(sqlQuery, TISERVER, null);
                 ReasonsList.Clear();
                 recolectorEventos += "Factura " + factura + " procesada en la RMA: " + RMA + "\n";
                 if (!epiAdapter.PartTranException.Equals(""))
                     recolectorEventos += epiAdapter.PartTranException + "\n";
 
                 recolectorEventos += "Terminó la generación de RMA para la factura " + factura;
-                file.writeContentToFile("Terminó la generación de RMA para la factura " + factura);
+                file.writeContentToFile(String.Format("[ {0} ] - Terminó la generación de RMA para la factura " + factura, System.DateTime.Now));
             }
             catch (System.IndexOutOfRangeException RMANotFound)
             {
                 recolectorEventos += "Se capturó la siguiente excepción al procesa la factura " + factura + ": " + RMANotFound.Message + "\n";
-                file.writeContentToFile("Se capturó la siguiente excepción: " + RMANotFound.Message);
+                file.writeContentToFile(String.Format("[ {0} ] - Se capturó la siguiente excepción: " + RMANotFound.Message, System.DateTime.Now));
                 string sql = String.Format("UPDATE tb_FactProc SET Status = 3 WHERE FactNum = {0};", factura);
                 util.SQLstatement(sql, TISERVER, null);
                 ReasonsList.Clear();
@@ -606,7 +606,7 @@ namespace ControlDevoluciones
             catch (Exception isBug)
             {
                 recolectorEventos += "Se capturó la siguiente excepción al procesa la factura " + factura + ": " + isBug.Message;
-                file.writeContentToFile("Excepción capturada " + isBug.Message);
+                file.writeContentToFile(String.Format("[ {0} ] - Excepción capturada " + isBug.Message, System.DateTime.Now));
                 string sql = String.Format("UPDATE tb_FactProc SET Status = 3 WHERE FactNum = {0};", factura);
                 util.SQLstatement(sql, TISERVER, null);
                 ReasonsList.Clear();

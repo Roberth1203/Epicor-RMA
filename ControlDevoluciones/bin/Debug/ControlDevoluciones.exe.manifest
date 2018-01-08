@@ -4,7 +4,7 @@
   <description asmv2:iconFile="if_shipping_87467.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="ControlDevoluciones" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="ControlDevoluciones" version="2.1.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="ControlDevoluciones.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlDevoluciones.exe" size="2183680">
-      <assemblyIdentity name="ControlDevoluciones" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlDevoluciones.exe" size="2343936">
+      <assemblyIdentity name="ControlDevoluciones" version="2.1.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>K5B6titZ+6CwRYSgVFO2hJoEWvJYUMrQvz6LiANOiuc=</dsig:DigestValue>
+        <dsig:DigestValue>iHwIPJz06RPwOiqj7bxu6idTEt6C2ET0SP6omT3H0Bo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -146,7 +146,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1Nlc2H4BMDzNcWtwep6/JZzIjrwXDslGwRkjV9KfutM=</dsig:DigestValue>
+        <dsig:DigestValue>sXJk6FLk8Q8PcKMlqVMUvmNikftX/3PjBiRcTfh1sIY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -362,7 +362,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xzP4AfwPtYKLlapEo5CVATFx5rWvs5ps4Nt5YC+wvg8=</dsig:DigestValue>
+        <dsig:DigestValue>Wyr4wKYkv8g7Fvk+bmCAwWmS6NYDk0N5M+Q0+bmbSoE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

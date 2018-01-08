@@ -35,11 +35,11 @@ namespace ControlDevoluciones
             InitializeComponent();
 
             if (ConfigurationManager.AppSettings["epiEnvironment"].ToString().Contains("TEST"))
-                this.TitleText = "Devoluciones MAC TEST";
+                this.TitleText = Application.ProductName + " | Ambiente TEST ";
             else
-                this.TitleText = "Devoluciones MAC";
+                this.TitleText =Application.ProductName;
 
-            appVersion.Text = "v2.0.1";
+            appVersion.Text = "Versión " + Application.ProductVersion;
         }
 
         private async void btnStartSession_Click(object sender, EventArgs e)

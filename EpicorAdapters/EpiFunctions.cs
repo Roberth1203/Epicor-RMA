@@ -432,12 +432,12 @@ namespace EpicorAdapters
                         }
                     }
                     else
-                        recolector = "Ya existe una disposición sobre la línea " + linea;
+                        recolector = String.Format("[ {0} ] - Ya existe una disposición sobre la línea " + linea, System.DateTime.Now);
                 }
             }
             catch (System.IndexOutOfRangeException ex)
             {
-                recolector = "Ocurrió un problema al momento de hacer la disposición " + ex.Message;
+                recolector = String.Format("[ {0} ] - Ocurrió un problema al momento de hacer la disposición " + ex.Message, System.DateTime.Now);
             }
         }
 
@@ -475,17 +475,17 @@ namespace EpicorAdapters
                     BO.CommitTransfer(dsTransfer, out legalMessage, out parTranPK);
                     BO.Dispose();
                 }
-                fileIO.writeContentToFile(" Transferencia a la ubicación " + targetBinNum + " de la parte " + partNum + " realizada correctamente.");
+                fileIO.writeContentToFile(String.Format("[ {0} ] - Transferencia a la ubicación " + targetBinNum + " de la parte " + partNum + " realizada correctamente.", System.DateTime.Now));
                 
             }
             catch (Ice.Common.EpicorServerException serverSideError)
             {
-                fileIO.writeContentToFile(String.Format("Error al realizar el traspaso de la parte {0} \n {1} ", partNum, serverSideError.Message));
+                fileIO.writeContentToFile(String.Format("[ {2} ] - Error al realizar el traspaso de la parte {0} \n {1} ", partNum, serverSideError.Message, System.DateTime.Now));
                 PartTranException += String.Format("Error al enviar la parte {0} a la ubicación primaria \n",partNum);
             }
             catch (Exception generalException)
             {
-                fileIO.writeContentToFile(String.Format("Error al realizar el traspaso de la parte {0} \n {1} ", partNum, generalException.Message));
+                fileIO.writeContentToFile(String.Format("[ {2} ] - Error al realizar el traspaso de la parte {0} \n {1} ", partNum, generalException.Message, System.DateTime.Now));
                 PartTranException += String.Format("Error al enviar la parte {0} a la ubicación primaria \n", partNum);
             }
         }
