@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ControlDevoluciones.exe.manifest" size="25450">
+    <dependentAssembly dependencyType="install" codebase="ControlDevoluciones.exe.manifest" size="24061">
       <assemblyIdentity name="ControlDevoluciones.exe" version="2.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tFPXP/ymVcwY/UjToC+G3o+cFlLq/VVmQBjqfIkpCHo=</dsig:DigestValue>
+        <dsig:DigestValue>GKksQawp3/A4jxu44wN4Bg5OoAPvrWrOBxm4Vo6CL0Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

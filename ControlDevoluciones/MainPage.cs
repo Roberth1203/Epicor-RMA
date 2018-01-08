@@ -133,9 +133,13 @@ namespace ControlDevoluciones
             {
                 if (e.Node.Enabled == true)
                 {
+                    // Separacion del nodo
+                    char[] separadores = {':',' '};
+                    string[] NodeItems = e.Node.Text.Split(separadores);
+
                     // Otención de registros
                     dtEventRows.Clear();
-                    varEventoID = e.Node.Text;
+                    varEventoID = NodeItems[7];
                     gifSearchInvc.Visible = true;
 
                     await Task.Factory.StartNew(async () =>
@@ -1071,8 +1075,9 @@ namespace ControlDevoluciones
         {
             try
             {
-                DataTable sql = util.getRecords("SELECT x.ResponsableRelacion,c.Name,x.Evento_Key FROM TISERVER.DevolucionesTEST.dbo.Choferes c CROSS APPLY(SELECT d.ResponsableRelacion, Evento_Key FROM dbo.MS_DevChfrs_tst d WHERE d.ResponsableRelacion = c.Id)x GROUP BY x.ResponsableRelacion, c.Name, x.Evento_Key ORDER BY x.ResponsableRelacion;", null, conEpicor);
-                
+                //DataTable sql = util.getRecords("SELECT x.ResponsableRelacion,c.Name,x.Evento_Key FROM TISERVER.DevolucionesTEST.dbo.Choferes c CROSS APPLY(SELECT d.ResponsableRelacion, Evento_Key FROM dbo.MS_DevChfrs_tst d WHERE d.ResponsableRelacion = c.Id)x GROUP BY x.ResponsableRelacion, c.Name, x.Evento_Key ORDER BY x.ResponsableRelacion;", null, conEpicor);
+                DataTable sql = util.getRecords("SELECT x.ResponsableRelacion,c.Name,x.Evento_Key,x.FolioRelacion FROM TISERVER.DevolucionesTEST.dbo.Choferes c CROSS APPLY(SELECT d.ResponsableRelacion, d.Evento_Key, d.FolioRelacion FROM dbo.MS_DevChfrs_tst d WHERE d.ResponsableRelacion = c.Id)x GROUP BY x.ResponsableRelacion, c.Name, x.Evento_Key, x.FolioRelacion ORDER BY x.ResponsableRelacion,x.FolioRelacion; ", null, conEpicor);
+
                 advTreeDrivers.ImageList = imgListTreeDrivers;
                 DevComponents.AdvTree.Node nodeDriver;
                 DevComponents.AdvTree.Node nodeEvent;
@@ -1089,7 +1094,7 @@ namespace ControlDevoluciones
                         tmpEvent = sql.Rows[ind].ItemArray[2].ToString();
 
                         nodeDriver = new DevComponents.AdvTree.Node(sql.Rows[ind].ItemArray[0].ToString() + " - " + sql.Rows[ind].ItemArray[1].ToString());
-                        nodeEvent = new DevComponents.AdvTree.Node(sql.Rows[ind].ItemArray[2].ToString());
+                        nodeEvent = new DevComponents.AdvTree.Node("Cobranza: " + sql.Rows[ind].ItemArray[3].ToString() + "   ID_Evento: " + sql.Rows[ind].ItemArray[2].ToString());
                         nodeDriver.ImageIndex = 1;
                         nodeEvent.ImageIndex = 2;
                         nodeDriver.ImageExpandedIndex = 0;
@@ -1106,7 +1111,7 @@ namespace ControlDevoluciones
                             tmpUser = sql.Rows[ind].ItemArray[0].ToString();
                             tmpEvent = sql.Rows[ind].ItemArray[2].ToString();
                             nodeDriver = new DevComponents.AdvTree.Node(sql.Rows[ind].ItemArray[0].ToString() + " - " + sql.Rows[ind].ItemArray[1].ToString());
-                            nodeEvent = new DevComponents.AdvTree.Node(sql.Rows[ind].ItemArray[2].ToString());
+                            nodeEvent = new DevComponents.AdvTree.Node("Cobranza: " + sql.Rows[ind].ItemArray[3].ToString() + "   ID_Evento: " + sql.Rows[ind].ItemArray[2].ToString());
                             nodeDriver.ImageIndex = 1;
                             nodeEvent.ImageIndex = 2;
                             nodeDriver.ImageExpandedIndex = 0;
@@ -1122,7 +1127,7 @@ namespace ControlDevoluciones
 
                             if (!sql.Rows[ind].ItemArray[2].ToString().Contains(tmpEvent)) //Si el evento_key no está repetido
                             {
-                                tmpEvent = sql.Rows[ind].ItemArray[2].ToString();
+                                tmpEvent = "Cobranza: " + sql.Rows[ind].ItemArray[3].ToString() + "   ID_Evento: " + sql.Rows[ind].ItemArray[2].ToString();
                                 nodeEvent = new DevComponents.AdvTree.Node(tmpEvent);
                                 nodeEvent.ImageIndex = 2;
                                 nodeAux.Nodes.Add(nodeEvent);

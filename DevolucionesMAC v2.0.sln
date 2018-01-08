@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Util
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicorAdapters", "EpicorAdapters\EpicorAdapters.csproj", "{388CC154-83AD-45FA-9F29-3DDA4E5F3187}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Devoluciones MAC", "Devoluciones MAC\Devoluciones MAC.vdproj", "{B5233C10-C09E-4A79-8BFD-82F10A192DB0}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DevolucionesMAC", "DevolucionesMAC\DevolucionesMAC.vdproj", "{65BF47C4-C5AC-40D5-B46E-C09DD96F7DB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,8 +29,8 @@ Global
 		{388CC154-83AD-45FA-9F29-3DDA4E5F3187}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{388CC154-83AD-45FA-9F29-3DDA4E5F3187}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{388CC154-83AD-45FA-9F29-3DDA4E5F3187}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B5233C10-C09E-4A79-8BFD-82F10A192DB0}.Debug|Any CPU.ActiveCfg = Debug
-		{B5233C10-C09E-4A79-8BFD-82F10A192DB0}.Release|Any CPU.ActiveCfg = Release
+		{65BF47C4-C5AC-40D5-B46E-C09DD96F7DB6}.Debug|Any CPU.ActiveCfg = Debug
+		{65BF47C4-C5AC-40D5-B46E-C09DD96F7DB6}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
