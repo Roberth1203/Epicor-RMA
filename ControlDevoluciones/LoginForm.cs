@@ -70,7 +70,6 @@ namespace ControlDevoluciones
                 //Asignación de datos del usuario para mostrar en barra de estado
                 form.lblUserName.Text = eFullName;
                 form.lbCompanyName.Text = eCompanyName;
-                form.lbProductName.Text = eProduct;
                 form.epiWorkstation = ePC;
                 asignarFolioTurno(userName, ePC);
                 form.idSesion = lista;
@@ -211,7 +210,7 @@ namespace ControlDevoluciones
                     //Asignación de datos del usuario para mostrar en barra de estado
                     form.lblUserName.Text = eFullName;
                     form.lbCompanyName.Text = eCompanyName;
-                    form.lbProductName.Text = eProduct;
+                    form.lbEventoActual.Text = eProduct;
                     form.epiWorkstation = ePC;
                     asignarFolioTurno(userName, ePC);
                     form.idSesion = lista;

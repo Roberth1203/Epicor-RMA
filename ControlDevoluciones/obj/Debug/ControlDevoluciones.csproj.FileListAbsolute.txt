@@ -306,3 +306,8 @@ C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\Cont
 C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\ControlDevoluciones\obj\Debug\ControlDevoluciones.application
 C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\ControlDevoluciones\obj\Debug\ControlDevoluciones.exe
 C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\ControlDevoluciones\obj\Debug\ControlDevoluciones.pdb
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\ControlDevoluciones\bin\Debug\es-MX\Epicor.ServiceModel.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\ControlDevoluciones\bin\Debug\es-MX\Erp.Contracts.BO.ARInvoice.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\ControlDevoluciones\bin\Debug\es-MX\Ice.Lib.Deployment.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\ControlDevoluciones\bin\Debug\es-MX\Erp.Contracts.BO.RMAProc.resources.dll
+C:\Users\analista_ifc\Documents\Visual Studio 2015\Projects\DevolucionesMAC\ControlDevoluciones\obj\Debug\ControlDevoluciones.Confirmacion.resources

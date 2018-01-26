@@ -9,6 +9,8 @@ namespace ControlDevoluciones
 {
     public class Orchestador
     {
+        public List<string> lFacturasReasignables = new List<string>();
+        public bool lineasAsignables = false;
         public string catcher;
         public DataTable dtFacturas = new DataTable();
         SQLUtilities sql = new SQLUtilities();
@@ -29,6 +31,7 @@ namespace ControlDevoluciones
         {
             try
             {
+                lineasAsignables = false;
                 List<string> FacturasCargadas = new List<string>();
                 if (dtFacturas.Rows.Count > 0)
                     dtFacturas.Clear();
@@ -50,8 +53,29 @@ namespace ControlDevoluciones
                             x++;
                         else
                         {
+                            // Revisión de partes para definir si hay asignaciones o no (Sólo si la devolución es parcial
+                            if (result.Rows[x].ItemArray[6].ToString().Equals("PARCIAL"))
+                            {
+                                string[] Facturas = result.Rows[x].ItemArray[0].ToString().Trim().Split(separadores);
+                                if (Facturas.Length > 1)
+                                {
+                                    string comodin = String.Empty;
+                                    int indice = 0;
+                                    foreach (string item in Facturas)
+                                    {
+                                        if (!result.Rows[x].ItemArray[5].ToString().Contains(item.Trim()))
+                                        {
+                                            lFacturasReasignables.Add(comodin);
+                                            lineasAsignables = true;
+                                        }
+                                        indice++;
+                                    }
+                                }
+                            }
+
                             string[] zFacturas = result.Rows[x].ItemArray[5].ToString().Trim().Split(separadores);
                             string[] zNLegales = result.Rows[x].ItemArray[1].ToString().Trim().Split(separadores);
+                            
                             if (zFacturas[4].Equals("")) // Si la posición 4 está vacía entonces solo aparece una vez en la factura y se importa la linea completa
                             {
                                 dtFacturas.ImportRow(result.Rows[x]);
@@ -129,6 +153,25 @@ namespace ControlDevoluciones
                             x++;
                         else
                         {
+                            if (result.Rows[x].ItemArray[6].ToString().Equals("PARCIAL"))
+                            {
+                                string[] Facturas = result.Rows[x].ItemArray[0].ToString().Trim().Split(separadores);
+                                if (Facturas.Length > 1)
+                                {
+                                    string comodin = String.Empty;
+                                    int indice = 0;
+                                    foreach (string item in Facturas)
+                                    {
+                                        if (!result.Rows[x].ItemArray[5].ToString().Contains(item.Trim()))
+                                        {
+                                            lFacturasReasignables.Add(comodin);
+                                            lineasAsignables = true;
+                                        }
+                                        indice++;
+                                    }
+                                }
+                            }
+                            
                             string[] xFacturas = result.Rows[x].ItemArray[5].ToString().Trim().Split(separadores);
                             string[] xNLegales = result.Rows[x].ItemArray[1].ToString().Trim().Split(separadores);
 
@@ -228,6 +271,7 @@ namespace ControlDevoluciones
         //public async Task<DataTable> getInvoiceDtl(Int32 lineaFactura, string EpiConnection, string currentInvoice)
         public async Task<DataTable> getInvoiceDtl(DataTable InvoiceLines, string EpiConnection, string currentInvoice)
         {
+            Console.WriteLine("DistrDev recibido: " + InvoiceLines.Rows[0].ItemArray[10]);
             catcher = String.Empty;
             Boolean firstExist = true;
             DataTable dtLineasDev = new DataTable();
@@ -952,6 +996,38 @@ namespace ControlDevoluciones
             }
         }
 
+        public async Task<DataTable> obtParteFacturaAlterna(string InvoiceNum, string PartNum, string connection)
+        {
+            DataTable x = new DataTable();
+            try
+            {
+                x = sql.getRecords(String.Format(ConfigurationManager.AppSettings["obtFactDtlAlt"], InvoiceNum, PartNum), null, connection);
+                return x;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                return x;
+            }
+        }
+
+        public async Task<DataTable> facturadoEnAsignados(string factura, string parte, string linea, string connection)
+        {
+            DataTable d = new DataTable();
+            try
+            {
+                d = sql.getRecords(String.Format("SELECT i.OurShipQty AS Facturado FROM Erp.InvcDtl i WHERE i.Company = 'DLMAC' AND i.InvoiceNum = {0} AND i.PartNum = '{1}' AND InvoiceLine = {2};", factura, parte, linea), null, connection);
+                return d;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                return d;
+            }
+        }
+
         private async Task<string> areaResponsable(string motivoDev)
         {
             string dev = String.Empty;
@@ -988,6 +1064,22 @@ namespace ControlDevoluciones
             }
             catch (Exception x)
             {
+                return d;
+            }
+        }
+
+        public async Task<DataTable> obtenerNumeroLegal(string invoice, string epiConnection)
+        {
+            DataTable d = new DataTable();
+            catcher = String.Empty;
+            try
+            {
+                d = sql.getRecords(String.Format("SELECT i.LegalNumber FROM Erp.InvcHead i WHERE i.Company = 'DLMAC' AND i.InvoiceNum = {0};", invoice), null, epiConnection);
+                return d;
+            }
+            catch (Exception e)
+            {
+                catcher = e.Message + " => " + e.StackTrace;
                 return d;
             }
         }

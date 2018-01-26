@@ -1,14 +1,10 @@
 ﻿using DevComponents.DotNetBar;
 using EpicorAdapters;
-using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,16 +22,20 @@ namespace ControlDevoluciones
         DataTable facturas = new DataTable();
         DataTable dtEventRows = new DataTable();
         DataTable dtResumenTarimas = new DataTable();
+        DataTable dt2 = new DataTable(); //Utilizado para obtener el detallado original de un evento con lineas reasignables
+        DataTable dtCustomEvent = new DataTable(); // Se utiliza para procesar las facturas de un evento modificado por el usuario
         string folderBase = ConfigurationManager.AppSettings["mainFolder"].ToString();
         string conMultistop = ConfigurationManager.AppSettings["connMultistop"].ToString();
         string conEpicor = ConfigurationManager.AppSettings["connEpicor"].ToString();
         string TISERVER = ConfigurationManager.AppSettings["connRMADB"].ToString();
         string recolectorEventos, varEventoID;
+        Int32 valorPrevioCambio = 0, asigPrevioCambio = 0;
         public List<string> partesRMA = new List<string>();
         public List<String> ReasonsList = new List<string>();
         public List<int> invoiceProcList = new List<int>(); //Lista de facturas ya procesadas
         List<int> selectedRows = new List<int>(); //Lista de filas para facturas a procesar
         public List<string> idSesion = new List<string>();
+        List<int> listadoIndFacturasAlt = new List<int>();
         ImageList imgInvoiceTree = new ImageList();
         public string epiUser;
         public string epiPass;
@@ -66,10 +66,13 @@ namespace ControlDevoluciones
             tmrLoader.Enabled = true;
             sincronizaFacturas();
             fillImageLists();
+            this.Text = Application.ProductName + " " + Application.ProductVersion;
         }
 
         private async void tmrLoader_Tick(object sender, EventArgs e)
         {
+            if (panelClsfDev.Expanded == true)
+                panelClsfDev.Expanded = false;
             data = new LoadInitData();
             tmrLoader.Stop();
             data.Show();
@@ -80,8 +83,7 @@ namespace ControlDevoluciones
             data.Close();
             tmrLoader.Enabled = false;
         }
-
-
+        
         private void PantallaPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -89,63 +91,45 @@ namespace ControlDevoluciones
         #endregion
 
         #region Eventos de botones
-        private async void btnObtRelacion_Click(object sender, EventArgs e)
-        {
-            /*
-            DataTable res = new DataTable();
-            gifSearchInvc.Visible = true;
-            sincronizaFacturas();
-
-            txtFacturasProcesadas.Text += "Obteniendo facturas del chofer " + listaChoferes.SelectedItem.ToString() + "...\n";
-            txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-
-            ToastNotification.DefaultToastPosition = eToastPosition.MiddleCenter;
-            ToastNotification.Show(this, "Buscando facturas del chofer seleccionado", 3000);
-
-            await Task.Factory.StartNew(async () =>
-            {
-                res = await functions.obtenerFacturas(listaChoferes.SelectedItem.ToString(), conEpicor);
-            }).Unwrap();
-
-            if (res.Rows.Count > 0)
-            {
-                dgvFacturas.DataSource = res;
-                txtFacturasProcesadas.Text += "Facturas pendientes obtenidas correctamente. \n";
-                txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-            }
-            else
-            {
-                txtFacturasProcesadas.Text += "No se encontró ninguna factura para el chofer seleccionado.\n";
-                txtFacturasProcesadas.SelectionStart = txtFacturasProcesadas.TextLength;
-            }
-            
-            ToastNotification.DefaultToastPosition = eToastPosition.MiddleCenter;
-            ToastNotification.Show(this, "Facturas cargadas correctamente", 2000);
-
-            dgvFacturas.Visible = true;   
-            gifSearchInvc.Visible = false;
-            */
-        }
-
         private async void advTreeDrivers_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
         {
             try
             {
                 if (e.Node.Enabled == true)
                 {
+                    //Limpieza del panel de asignación
+                    limpiarPanelAsignacion();
+
                     // Separacion del nodo
                     char[] separadores = {':',' '};
+                    char[] sepFacturas = { ',' };
                     string[] NodeItems = e.Node.Text.Split(separadores);
-
+                    
                     // Otención de registros
                     dtEventRows.Clear();
                     varEventoID = NodeItems[7];
+                    lbEventoActual.Text = NodeItems[7];
+                    
                     gifSearchInvc.Visible = true;
 
                     await Task.Factory.StartNew(async () =>
                     {
                         dtEventRows = await functions.obtenerFacturas(varEventoID, conEpicor);
                     }).Unwrap();
+
+                    // Carga de facturas con lineas asignables a la lista para dispersión
+                    if (functions.lineasAsignables == true)
+                    {
+                        panelClsfDev.Expanded = true;
+                        gifObtPartesAsignables.Visible = true;
+                        await Task.Factory.StartNew(async () =>
+                        {
+                            await cargarPartesAsignables();
+                        }).Unwrap();
+
+                        dgvNvoDetalleEventoKey.DataSource = dt2;
+                        gifObtPartesAsignables.Visible = false;
+                    }
 
                     if (dtEventRows.Rows.Count > 0)
                         dgvFacturas.DataSource = dtEventRows;
@@ -158,7 +142,7 @@ namespace ControlDevoluciones
             }
             catch (System.NullReferenceException) { }
         }
-
+        
         private async void btnEventProcess_Click(object sender, EventArgs e)
         {
             try
@@ -182,7 +166,7 @@ namespace ControlDevoluciones
                 
                 foreach (DataRow row in dtEventRows.Rows)
                 {
-                    DataRow[] rows = EventRecords.Select(String.Format("Facturas LIKE '%{0}%'",dtEventRows.Rows[i].ItemArray[0].ToString()));
+                    DataRow[] rows = EventRecords.Select(String.Format("DistrDev LIKE '%{0}%'",dtEventRows.Rows[i].ItemArray[0].ToString()));
                     tmp = rows.CopyToDataTable();
 
                     /* ******************************************* */
@@ -253,7 +237,7 @@ namespace ControlDevoluciones
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show(exc.StackTrace, exc.Message);
             }
         }
 
@@ -285,7 +269,7 @@ namespace ControlDevoluciones
             }
             catch (System.IO.IOException fileException)
             {
-                MessageBox.Show(fileException.Message);
+                MessageBox.Show(fileException.StackTrace, fileException.Message);
             }
         }
         #endregion
@@ -306,12 +290,8 @@ namespace ControlDevoluciones
             string instruccion = ConfigurationManager.AppSettings["obtChoferes"].ToString();
             int index = 0;
             DataTable dt = util.getRecords(instruccion, null, conEpicor);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                //listaChoferes.Items.Add(row[0].ToString() + " - " + row[1].ToString());
-                index++;
-            }
+            if (util.catchError != "")
+                MessageBox.Show(util.catchError);
         }
 
         private void obtFolioProceso()
@@ -527,41 +507,18 @@ namespace ControlDevoluciones
                         }
                         catch (System.Data.SqlClient.SqlException x)
                         {
-                            MessageBox.Show(x.Message);
+                            MessageBox.Show(x.StackTrace, x.Message);
                         }
                         catch (Exception y)
                         {
-                            MessageBox.Show(y.Message);
+                            MessageBox.Show(y.StackTrace, y.Message);
                         }
 
                         recolectorEventos += epiAdapter.recolector + "\n";
                         file.writeContentToFile(String.Format("[ {0} ] - " + epiAdapter.recolector, System.DateTime.Now));
                         ReasonsList.Add(razon.Substring(0, 5)); // Se almacena el motivo de devolucion de la línea actual
                         existencia++;
-
-                        /*
-                        // 28/09/2017 (No valida) - Se agrega una restricción mas para permitir varias veces la misma parte solo si se clasifica a una ubicación diferente
-                        if (!iRMALine[3].Equals(lineaFactura))
-                        {
-                            if (!iRMALine[4].Equals(ubicacion))
-                            {
-                                int lineaRMA = existencia + 1;
-                                string tarimaDest = await definirTarimaDestino(ubicacion, zona);
-                                epiAdapter.RMANewLine(RMA, lineaRMA, legal, factura, lineaFactura, numOrden, lineaOrden, relOrden, parte, desc, razon, cant, UOM, customer, comentarios, almacen, ubicacion, tarimaDest, primbin);
-                                recolectorEventos += epiAdapter.recolector + "\n";
-
-                                file.writeContentToFile(epiAdapter.recolector);
-                                ReasonsList.Add(razon.Substring(0, 5)); // Se almacena el motivo de devolucion de la línea actual
-                                existencia++;
-                            }
-                        }
-                        else
-                        {
-                            recolectorEventos += "Ya existe la parte " + iRMALine[2] + " con número de línea " + iRMALine[3] + "\n";
-                            file.writeContentToFile("Ya existe la parte " + iRMALine[2] + " con número de línea " + iRMALine[3]);
-                        }
-                        // 28/09/2017 - Fin de Customización
-                        */
+                        
                     }
                     else
                     {
@@ -579,7 +536,6 @@ namespace ControlDevoluciones
                 file.writeContentToFile(String.Format("[ {0} ] - " + epiAdapter.recolector, System.DateTime.Now));
 
                 //Terminada la RMA se actualiza el status de la factura en la BD Devoluciones
-
                 Console.WriteLine("Valor factura: " + factura + "\nValor RMA: " + RMA);
                 sqlQuery = String.Format("UPDATE tb_FactProc SET Status = 1 WHERE FactNum = {0};", factura);
                 util.SQLstatement(sqlQuery, TISERVER, null);
@@ -598,11 +554,7 @@ namespace ControlDevoluciones
                 string sql = String.Format("UPDATE tb_FactProc SET Status = 3 WHERE FactNum = {0};", factura);
                 util.SQLstatement(sql, TISERVER, null);
                 ReasonsList.Clear();
-            }/*
-            catch (System.NullReferenceException nulo)
-            {
-
-            }*/
+            }
             catch (Exception isBug)
             {
                 recolectorEventos += "Se capturó la siguiente excepción al procesa la factura " + factura + ": " + isBug.Message;
@@ -708,11 +660,11 @@ namespace ControlDevoluciones
             }
             catch (System.NullReferenceException isNull)
             {
-                MessageBox.Show("Excepción por referencia nula ... \n" + isNull.Message, "NullReferenceException Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(isNull.StackTrace, isNull.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception isError)
             {
-                MessageBox.Show("Excepción capturada ... \n" + isError.Message, "Exception Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(isError.StackTrace, isError.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -782,7 +734,7 @@ namespace ControlDevoluciones
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace, ex.Message);
             }
 
             treeFacturasPendientes.ExpandAll();
@@ -844,7 +796,7 @@ namespace ControlDevoluciones
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace, ex.Message);
             }
 
             treeFacturasProcesadas.ExpandAll();
@@ -1033,50 +985,795 @@ namespace ControlDevoluciones
             }
             catch (System.IO.IOException fileException)
             {
-                MessageBox.Show(fileException.Message);
+                MessageBox.Show(fileException.StackTrace, fileException.Message);
             }
         }
-
-        private async void dgvFacturas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //try
-            //{
-            //    string factura_actual = dgvFacturas.CurrentCell.Value.ToString();
-            //    int linea = dgvFacturas.CurrentCell.RowIndex;
-            //    DataTable dt = new DataTable();
-
-            //    if (dgvFacturas.CurrentCell.ColumnIndex == 1)
-            //    {
-            //        ToastNotification.DefaultToastGlowColor = eToastGlowColor.Blue;
-            //        ToastNotification.DefaultToastPosition = eToastPosition.MiddleCenter;
-            //        ToastNotification.Show(this, "Consultando detallado de líneas a devolver", 2000);
-
-            //        await Task.Factory.StartNew(async () =>
-            //        {
-            //            dt = await functions.getInvoiceDtl(linea, conEpicor, factura_actual);
-            //        }).Unwrap();
-
-            //        dgvDetFactura.DataSource = dt;
-
-            //        ToastNotification.DefaultToastGlowColor = eToastGlowColor.Blue;
-            //        ToastNotification.DefaultToastPosition = eToastPosition.MiddleCenter;
-            //        ToastNotification.Show(this, "Detalle consultado correctamente", 1000);
-            //    }
-            //}
-            //catch (System.NullReferenceException) { }
-        }
-
+        
         private void sideNavItem1_Click(object sender, EventArgs e)
         {
 
         }
 
+
+        #region Funciones modificación de devolucion a facturas alternas
+
+        private async void listPartesReasignables_ItemClick(object sender, EventArgs e)
+        {
+            DataTable d = new DataTable();
+            txReturnQtyDev.Text = "0";
+            txAvailableQtyDev.Text = "0";
+            txPartNumDev.Text = "";
+            panelAwaitForDetail.Visible = true;
+            txPartNumDev.Text = listPartesReasignables.SelectedItem.ToString();
+
+            await Task.Factory.StartNew(async () =>
+            {
+                d = await consultarDetallado(listPartesReasignables.SelectedItem.ToString(), varEventoID);
+            }).Unwrap();
+            
+            dgvDetalleLineasAsignables.DataSource = d;
+
+            //Asigncación del campo DistrDev si Definido es igual a 1.
+            foreach (DataGridViewRow row in dgvDetalleLineasAsignables.Rows)
+            {
+                for (int i = 0; i < dgvDetalleLineasAsignables.Columns.Count; i++)
+                {
+                    if (i != 1)
+                        row.Cells[i].ReadOnly = true;
+                }
+
+                DataTable w = new DataTable();
+                if (!row.Cells[18].Value.ToString().Equals(""))
+                {
+                    await Task.Factory.StartNew(async () =>
+                    {
+                        w = await functions.facturadoEnAsignados(row.Cells[2].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString(), conEpicor);
+                    }).Unwrap();
+                    row.Cells[0].Value = w.Rows[0].ItemArray[0];
+                    row.Cells[1].Value = row.Cells[12].Value;
+                }
+                else
+                {
+                    row.Cells[1].Value = 0;
+                    row.Cells[0].Value = row.Cells[12].Value;
+                }
+            }
+
+            //Ocultar filas a usuario disponibles para proceso del evento
+            DataGridViewBand b1  = dgvDetalleLineasAsignables.Columns[6]; //Empaque
+            DataGridViewBand b2 = dgvDetalleLineasAsignables.Columns[7]; //LineaE
+            DataGridViewBand b3 = dgvDetalleLineasAsignables.Columns[8]; //Motivo
+            DataGridViewBand b4 = dgvDetalleLineasAsignables.Columns[9]; //Orden
+            DataGridViewBand b5 = dgvDetalleLineasAsignables.Columns[10]; //LineaO
+            DataGridViewBand b6 = dgvDetalleLineasAsignables.Columns[11]; //Relacion
+            DataGridViewBand b7 = dgvDetalleLineasAsignables.Columns[12]; //DistrDev
+            DataGridViewBand b8 = dgvDetalleLineasAsignables.Columns[14]; //DistrClfs
+            DataGridViewBand b9 = dgvDetalleLineasAsignables.Columns[15]; //Observaciones
+            DataGridViewBand b10 = dgvDetalleLineasAsignables.Columns[16]; //ZoneID
+            DataGridViewBand b11 = dgvDetalleLineasAsignables.Columns[17]; //PrimBin
+            DataGridViewBand b12 = dgvDetalleLineasAsignables.Columns[17]; //Definido
+
+            b1.Visible = false;
+            b2.Visible = false;
+            b3.Visible = false;
+            b4.Visible = false;
+            b5.Visible = false;
+            b6.Visible = false;
+            b7.Visible = false;
+            b8.Visible = false;
+            b9.Visible = false;
+            b10.Visible = false;
+            b11.Visible = false;
+            b12.Visible = false;
+
+            txReturnQtyDev.Text = calcDevuelto().ToString();
+            txAvailableQtyDev.Text = "0";
+            panelAwaitForDetail.Visible = false;
+            btCargarLineas.Enabled = true;
+        }
+
+        // Se evaluan todas las partes del evento que se pueden asignar a otras facturas
+        private async Task cargarPartesAsignables()
+        {
+            DataTable dtPartesEvento = new DataTable();
+            List<string> procesados = new List<string>();
+            List<string> reasignables = new List<string>();
+            int facturaCargada = -1;
+            char[] trim = { ':',',' };
+            listPartesReasignables.Items.Clear(); // Si hubiera datos anteriores se limpia el listBox   
+
+            dtPartesEvento = await functions.LinesToDetail(varEventoID, conEpicor); // Se obtienen todos los registros del evento actual
+
+            DataRow[] filasVariasFacturas = dtPartesEvento.Select("Facturas LIKE '%,%'"); // se filtran los registros que contengan ',' en la columna Facturas
+            
+            for (int a = 0; a < filasVariasFacturas.Length; a++)
+            {
+                int x = 0;
+                procesados.Clear();
+                string[] facts = filasVariasFacturas[a].ItemArray[0].ToString().Split(trim); //Separación del campo Facturas
+                foreach (string i in facts)
+                {
+                    facturaCargada = procesados.FindIndex(delegate (string current)
+                    {
+                        return current.Contains(facts[x]);
+                    });
+
+                    if (facturaCargada == -1)
+                    {
+                        if (!filasVariasFacturas[a].ItemArray[10].ToString().Contains(facts[x]))
+                        {
+                            listPartesReasignables.Items.Add(filasVariasFacturas[a].ItemArray[2].ToString());
+                            reasignables.Add(filasVariasFacturas[a].ItemArray[2].ToString());
+                            procesados.Add(facts[x]);
+                        }
+                    }
+                    facturaCargada = -1;
+                    
+                    x++;
+                }
+            }
+
+            // Generación de detallado de las partes no reasignables
+            int z = 0,size = reasignables.Count;
+            string partesOmitidas = String.Empty;
+            foreach (string item in reasignables)
+            {
+                if (z == 0) //Primer iteracion
+                    if ((z + 1) == size)
+                        partesOmitidas += "'" + item + "'";
+                    else
+                        partesOmitidas += "'" + item + "',";
+                else //Despues de primer iteracion
+                    if ((z + 1) == size)
+                    partesOmitidas += "'" + item + "'";
+                else
+                    partesOmitidas += "'" + item + "',";
+                z++;
+            }
+            Console.WriteLine("Partes a omitir: " + partesOmitidas);
+            DataTable dt1 = util.getRecords(String.Format(ConfigurationManager.AppSettings["obtNoAsignables"], varEventoID, partesOmitidas),null,conEpicor);
+            dt2 = dt1.Clone(); //Clonado de estructura para presentar los datos
+            DataTable dt3 = new DataTable();
+
+            List<string> l1 = new List<string>(); //Lista PartNum
+            List<string> l2 = new List<string>(); //Lista DistrDev
+            int y = 0, ind1 = 0, ind2 = 0;
+            foreach (DataRow row in dt1.Rows)
+            {
+                l1.Add(dt1.Rows[y].ItemArray[2].ToString());
+                l2.Add(dt1.Rows[y].ItemArray[10].ToString());
+                y++;
+            }
+
+            do
+            {
+                string part = l1[ind1]; //asignación de parte a procesar
+                string[] fact = l2[ind1].ToString().Split(trim); //separacion de DitrDev
+                if (fact.Length > 5)
+                    Console.WriteLine("--> " + fact[0]);
+                do
+                {
+                    if (!fact[ind2].Trim().Equals(""))
+                    {
+                        DataTable bum = util.getRecords(String.Format("SELECT r.Facturas,''  AS Linea,r.IdProducto,''  AS Descripcion,''  AS Empaque,''  AS LineaE,r.motivodevolucion,''  AS Orden,''  AS LineaO,''  AS Relacion,r.DistrDev,r.unidad,r.DistrClsf,r.Observaciones,r.ZoneID,r.PrimBin FROM ERP10DB.dbo.MS_DevChfrs_tst r WHERE Evento_Key = '{0}' AND IdProducto = '{1}' ORDER BY r.IdProducto, r.Facturas;", varEventoID, part), null, conEpicor);
+                        await Task.Factory.StartNew(async () =>
+                        {
+                            dt3 = await functions.getInvoiceDtl(bum, conEpicor, fact[ind2].Trim());
+                        }).Unwrap();
+
+                        foreach (DataRow tmp in dt3.Rows)
+                            dt2.ImportRow(tmp);
+                    }
+                    ind2 += 4;
+                }
+                while (ind2 < fact.Length);
+                ind2 = 0; //Reinicio del indice para recorrer el array fact
+                ind1++;
+            }
+            while (ind1 < l1.Count);
+        }
+
+        private async Task<DataTable> consultarDetallado(string partNum, string Evento)
+        {
+            DataTable Part = new DataTable();
+            try
+            {
+                int ind = 0, facturaCargada = -1;
+                List<string> lFacturasConsultadas = new List<string>();
+                List<String> listAlternasCargadas = new List<string>(); // Lista para almacenar las facturas que se han cargado al grid de asignación
+                string wAlternos = String.Empty;
+                DataTable PartDtl = new DataTable();
+                DataTable dtFinal = new DataTable();
+                DataTable InvoiceDtl = new DataTable();
+                DataTable prim = new DataTable();
+
+                char[] separadores = { ':', ',' };
+                PartDtl = util.getRecords(String.Format("SELECT r.Facturas,''  AS Linea,r.IdProducto,''  AS Descripcion,''  AS Empaque,''  AS LineaE,r.motivodevolucion,''  AS Orden,''  AS LineaO,''  AS Relacion,r.DistrDev,r.unidad,r.DistrClsf,r.Observaciones,r.ZoneID,r.PrimBin,'' AS Definido FROM ERP10DB.dbo.MS_DevChfrs_tst r WHERE Evento_Key = '{0}' AND IdProducto = '{1}' ORDER BY r.IdProducto, r.Facturas;", Evento, partNum), null, conEpicor);
+                dtFinal = PartDtl.Clone();
+                string[] arr = PartDtl.Rows[ind].ItemArray[10].ToString().Trim().Split(separadores);
+                string[] facturasAlternas = PartDtl.Rows[ind].ItemArray[0].ToString().Trim().Split(separadores);
+
+                // Obtención del detallado original de la parte
+                do
+                {
+                    if (lFacturasConsultadas.Count == 0)
+                        lFacturasConsultadas.Add(arr[ind].Trim());
+                    else
+                    {
+                        facturaCargada = lFacturasConsultadas.FindIndex(delegate (string current)
+                        {
+                            return current.Contains(arr[ind].Trim());
+                        });
+                    }
+
+                    if (facturaCargada == -1)
+                    {
+                        InvoiceDtl = util.getRecords(String.Format("SELECT r.Facturas,''  AS Linea,r.IdProducto,''  AS Descripcion,''  AS Empaque,''  AS LineaE,r.motivodevolucion,''  AS Orden,''  AS LineaO,''  AS Relacion,r.DistrDev,r.unidad,r.DistrClsf,r.Observaciones,r.ZoneID,r.PrimBin,'' AS Definido FROM ERP10DB.dbo.MS_DevChfrs_tst r WHERE Evento_Key = '{0}' AND IdProducto = '{1}' ORDER BY r.IdProducto, r.Facturas;", Evento, partNum), null, conEpicor);
+                        string factura = arr[ind].Trim();
+                        if (arr[ind].Equals(""))
+                            break;
+                        else
+                        {
+                            await Task.Factory.StartNew(async () =>
+                            {
+                                prim = await functions.getInvoiceDtl(InvoiceDtl, conEpicor, factura);
+                            }).Unwrap();
+                            foreach (DataRow r in prim.Rows)
+                            {
+                                dtFinal.ImportRow(r);
+                                dtFinal.Rows[dtFinal.Rows.Count - 1][16] = 1;
+                            }
+                        }
+                        lFacturasConsultadas.Add(arr[ind].Trim());
+                    }
+                    ind += 4;
+                }
+                while (ind < arr.Length);
+
+                // Obtención de detallado de facturas alternas
+                int pos = 0;
+                foreach (string s in facturasAlternas)
+                {
+                    if (!PartDtl.Rows[0].ItemArray[10].ToString().Contains(facturasAlternas[pos]))
+                    {
+                        Boolean existe = false;
+                        buscarEnLista(listAlternasCargadas, facturasAlternas[pos], out existe);
+
+                        if (existe == false)
+                        {
+                            // Adicion de la factura en la lista de alternas cargadas
+                            listAlternasCargadas.Add(facturasAlternas[pos]);
+                            // Adicion de fila al table final
+                            DataTable AltInvcDtl = new DataTable();
+                            int indice = 0;
+                            await Task.Factory.StartNew(async () =>
+                            {
+                                AltInvcDtl = await functions.obtParteFacturaAlterna(facturasAlternas[pos].Trim(), partNum, conEpicor);
+                            }).Unwrap();
+
+                            foreach (DataRow row in AltInvcDtl.Rows)
+                            {
+                                dtFinal.Rows.Add();
+                                int w = dtFinal.Rows.Count - 1;
+                                listadoIndFacturasAlt.Add(w);
+                                dtFinal.Rows[w][0] = AltInvcDtl.Rows[indice][0]; //InvoiceNum
+                                dtFinal.Rows[w][1] = AltInvcDtl.Rows[indice][1]; //InvoiceLine
+                                dtFinal.Rows[w][2] = partNum; //PartNum
+                                dtFinal.Rows[w][3] = AltInvcDtl.Rows[indice][3]; //LineDesc
+                                dtFinal.Rows[w][4] = AltInvcDtl.Rows[indice][4]; //PackNum
+                                dtFinal.Rows[w][5] = AltInvcDtl.Rows[indice][5]; //PackLine
+                                dtFinal.Rows[w][6] = dtFinal.Rows[w - 1][6]; //Return Reason
+                                dtFinal.Rows[w][7] = AltInvcDtl.Rows[indice][6]; //OrderNum
+                                dtFinal.Rows[w][8] = AltInvcDtl.Rows[indice][7]; //OrderLine
+                                dtFinal.Rows[w][9] = AltInvcDtl.Rows[indice][8]; //OrderRelNum
+                                dtFinal.Rows[w][10] = AltInvcDtl.Rows[indice][9]; //PartQty
+                                //dtFinal.Rows[w][10] = AltInvcDtl.Rows[indice][]; //
+                                dtFinal.Rows[w][11] = dtFinal.Rows[w - 1][11]; //UOM
+                                dtFinal.Rows[w][12] = dtFinal.Rows[w - 1][12]; //Clasification
+                                dtFinal.Rows[w][13] = dtFinal.Rows[w - 1][13]; //Note
+                                dtFinal.Rows[w][14] = dtFinal.Rows[w - 1][14]; //ZoneID
+                                dtFinal.Rows[w][15] = dtFinal.Rows[w - 1][15]; //PrimBin
+
+                                indice++;
+                            }
+                        
+
+
+                            if (facturasAlternas.Length == 1)
+                                wAlternos += facturasAlternas[pos];
+                            else if (facturasAlternas.Length > 1)
+                            {
+                                if (wAlternos.Equals(""))
+                                {
+                                    if ((pos + 1) == facturasAlternas.Length)
+                                        wAlternos += facturasAlternas[pos];
+                                    else
+                                        wAlternos += facturasAlternas[pos] + ",";
+                                }
+                                else
+                                {
+                                    if ((pos + 1) == facturasAlternas.Length)
+                                        wAlternos += facturasAlternas[pos];
+                                    else
+                                        wAlternos += facturasAlternas[pos] + ",";
+                                }
+                            }
+                        }
+                        
+                    }
+                    pos++;
+                }
+                Console.WriteLine("Facturas alternas a consultar: " + wAlternos);
+                return dtFinal;
+
+            }
+            catch (System.IndexOutOfRangeException log)
+            {
+                MessageBox.Show(log.StackTrace, log.Message, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return Part;
+            }
+            catch (Exception e)
+            {
+                return Part;
+            }
+        }
+
+        private void limpiarPanelAsignacion()
+        {
+            listPartesReasignables.Items.Clear();
+            dgvDetalleLineasAsignables.DataSource = null;
+            dgvNvoDetalleEventoKey.DataSource = null;
+        }
+
+        private async void btnActualizarChfrs_Click(object sender, EventArgs e)
+        {
+            advTreeDrivers.Nodes.Clear();
+            // Se cierra el panel de reasignción (si está abierto)
+            if (panelClsfDev.Expanded == true)
+                panelClsfDev.Expanded = false;
+
+            data = new LoadInitData();
+            tmrLoader.Stop();
+            data.Show();
+            await Task.Factory.StartNew(async () =>
+            {
+                await fillAdvTree();
+            }).Unwrap();
+            data.Close();
+            tmrLoader.Enabled = false;
+        }
+
+        private void cargarAsignaciones()
+        {
+            string currentItem = listPartesReasignables.SelectedItem.ToString();
+            foreach (DataGridViewRow row in dgvDetalleLineasAsignables.Rows)
+            {
+                if (Convert.ToDouble(row.Cells[1].Value) > 0)
+                {
+                    dt2.Rows.Add(dgvDetalleLineasAsignables.Rows[row.Index].Cells[2].Value/* Facturas */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[3].Value/* Linea*/,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[4].Value/* IdProducto*/,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[5].Value/* Descripcion*/,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[6].Value/* Empaque */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[7].Value/* LineaE */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[8].Value/* Motivo */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[9].Value/* Orden */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[10].Value/* LineaO */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[11].Value/* Relacion */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[1].Value/* Cantidad */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[13].Value/* unidad */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[14].Value/* DitrClsf */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[15].Value/* Observaciones */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[16].Value/* ZoneID */,
+                                 dgvDetalleLineasAsignables.Rows[row.Index].Cells[17].Value/* PrimBin */);
+                }
+            }
+            dgvNvoDetalleEventoKey.DataSource = dt2;
+            listPartesReasignables.Items.Remove(currentItem);
+            txPartNumDev.Text = "";
+            txReturnQtyDev.Text = "";
+            txAvailableQtyDev.Text = "";
+            dgvDetalleLineasAsignables.DataSource = null;
+            btCargarLineas.Enabled = false;
+
+            if (listPartesReasignables.Items.Count == 0)
+                btProcesarAsignacionesEvt.Enabled = true;
+        }
+
+        private Boolean soloNumeros(string dato)
+        {
+            Regex Val = new Regex(@"^[+]?\d+(\.\d+)?$");
+            if (Val.IsMatch(dato))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
+        private void dgvDetalleLineasAsignables_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Boolean bandera = false;
+                if (e.ColumnIndex == 1)
+                {
+                    Double AllReturnQty = Convert.ToDouble(txReturnQtyDev.Text);
+                    Double AvailableQty = Convert.ToDouble(txAvailableQtyDev.Text);
+
+                    Boolean flag = soloNumeros(dgvDetalleLineasAsignables.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+                    if (flag == false)
+                    {
+                        MessageBox.Show("Debe ingresar solo números en el campo cantidad.\nSe revertirá el cambio.", "Error");
+                        dgvDetalleLineasAsignables.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = valorPrevioCambio;
+                    }
+
+                    bandera = devueltoFacturado(e.RowIndex, e.ColumnIndex);
+                    if (bandera == false)
+
+                    txAvailableQtyDev.Text = calcDisponible(e.RowIndex, e.ColumnIndex).ToString();
+                }
+            }
+            catch (System.NullReferenceException)
+            {
+                MessageBox.Show("La celda no puede quedar vacía.\nSe revertirá el cambio.","Error",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+            }
+        }
+
+        private void dgvDetalleLineasAsignables_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            valorPrevioCambio = Convert.ToInt32(dgvDetalleLineasAsignables.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+            asigPrevioCambio = Convert.ToInt32(txAvailableQtyDev.Text);
+        }
+
+        private void btCargarLineas_Click(object sender, EventArgs e)
+        {
+            confirmAsignaciones(listPartesReasignables.SelectedItem.ToString());
+        }
+
+        private Double calcDevuelto()
+        {
+            Double result = 0;
+
+            foreach (DataGridViewRow row in dgvDetalleLineasAsignables.Rows)
+                if (Convert.ToInt32(row.Cells[1].Value) > 0)
+                    result += Convert.ToInt32(row.Cells[1].Value);
+
+            return result;
+        }
+
+        private Double calcDisponible(Int32 rowIndex, Int32 colIndex)
+        {
+            Double total = Convert.ToDouble(txReturnQtyDev.Text);
+            Double res = 0;
+
+            foreach (DataGridViewRow row in dgvDetalleLineasAsignables.Rows)
+            {
+                if (Convert.ToInt32(row.Cells[1].Value) > 0)
+                    res += Convert.ToDouble(row.Cells[1].Value);
+            }
+
+            if (total > res)
+                btCargarLineas.Enabled = false;
+            else if (total < res)
+            {
+                MessageBox.Show("La cantidad que está asignando supera la cantidad devuelta, se revertirá el cambio.", "Asignación mayor a lo facturado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                dgvDetalleLineasAsignables.Rows[rowIndex].Cells[colIndex].Value = valorPrevioCambio;
+                txAvailableQtyDev.Text = asigPrevioCambio.ToString();
+                btCargarLineas.Enabled = false;
+            }
+            else if (total == res)
+                btCargarLineas.Enabled = true;
+
+            res = total - res; 
+            return res;
+        }
+
+        private Boolean devueltoFacturado(Int32 rowIndex, Int32 colIndex)
+        {
+            Boolean f = false;
+            if (!dgvDetalleLineasAsignables.Rows[rowIndex].Cells[0].Value.ToString().Equals(""))
+            {
+                Double total = Convert.ToDouble(txReturnQtyDev.Text);
+                Double Invoiced = Convert.ToDouble(dgvDetalleLineasAsignables.Rows[rowIndex].Cells[0].Value);
+                Double qty = Convert.ToDouble(dgvDetalleLineasAsignables.Rows[rowIndex].Cells[colIndex].Value);
+
+                if (qty > Invoiced) //Revisión contra lo facturado
+                {
+                    MessageBox.Show("La cantidad asignada supera el máximo facturado, no es aplicable la cantidad.", "Asignación mayor a facturado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    dgvDetalleLineasAsignables.Rows[rowIndex].Cells[colIndex].Value = valorPrevioCambio;
+                    txAvailableQtyDev.Text = asigPrevioCambio.ToString();
+                }
+                else // Validación contra asignación y facturado
+                {
+                    Double sumaDev = calcDevuelto();
+
+                    if (total < sumaDev)
+                    {
+                        MessageBox.Show("Con la cantidad asignada el total sería mayor a lo devuelto, revirtiendo cambio.", "Total asignado menor a devuelto", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        dgvDetalleLineasAsignables.Rows[rowIndex].Cells[colIndex].Value = valorPrevioCambio;
+                        txAvailableQtyDev.Text = asigPrevioCambio.ToString();
+                    }
+                }
+            }
+
+            return f;
+        }
+
+        private void confirmAsignaciones(string partNum)
+        {
+            Form formConfirm = new Form();
+            formConfirm.MaximizeBox = false;
+            formConfirm.MinimizeBox = false;
+            formConfirm.FormBorderStyle = FormBorderStyle.FixedDialog;
+            formConfirm.StartPosition = FormStartPosition.CenterScreen;
+            formConfirm.Size = new Size(514, 118);
+
+            Label mensaje = new Label();
+            Button btOK = new Button();
+            Button btCancel = new Button();
+
+            mensaje.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mensaje.Text = String.Format("¿Las asignaciones hechas a la parte {0} son correctas?", partNum);
+            mensaje.Location = new Point(3, 9);
+            mensaje.Size = new Size(491, 20);
+
+            btOK.Text = "Si, continuar";
+            btOK.Location = new Point(299, 44);
+            btOK.Size = new Size(77, 23);
+            btOK.DialogResult = DialogResult.OK;
+
+            btCancel.Text = "Seguir editando";
+            btCancel.Location = new Point(391, 44);
+            btCancel.Size = new Size(89, 23);
+            btCancel.DialogResult = DialogResult.Cancel;
+
+            formConfirm.Controls.Add(mensaje);
+            formConfirm.Controls.Add(btOK);
+            formConfirm.Controls.Add(btCancel);
+
+            // Ejecución
+            formConfirm.ShowDialog();
+            if (formConfirm.DialogResult == DialogResult.OK)
+            {
+                cargarAsignaciones();
+                formConfirm.Dispose();
+            }
+            else
+                formConfirm.Dispose();
+        }
+
+        private async void dialogoConfirmacionEvt()
+        {
+            // Variables
+            DataTable dtl = await clsfFacturasNuevoEvento();
+
+            // Fomulario
+            Form form1 = new Form();
+            form1.Size = new Size(956, 344);
+            form1.FormBorderStyle = FormBorderStyle.FixedDialog;
+            form1.StartPosition = FormStartPosition.CenterScreen;
+
+            // Componentes
+            Label lb1 = new Label();
+            Label lb2 = new Label();
+            Label lb3 = new Label();
+            Button button1 = new Button();
+            Button button2 = new Button();
+            form1.AcceptButton = button1;
+            form1.CancelButton = button2;
+            form1.MaximizeBox = false;
+            form1.MinimizeBox = false;
+
+            lb1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lb1.Text = "¿Confirma los cambios realizados?";
+            lb1.Size = new Size(333, 24);
+            lb1.Location = new Point(23, 9);
+            lb2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lb2.Text = "Devolución Inicial";
+            lb2.Size = new Size(131, 16);
+            lb2.Location = new Point(9, 41);
+            lb3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lb3.Text = "Devolución con ajustes del usuario";
+            lb3.Size = new Size(250, 16);
+            lb3.Location = new Point(499, 41);
+            DataGridView dgvBefore = new DataGridView();
+            DataGridView dgvAfter = new DataGridView();
+
+            dgvBefore.Location = new Point(12, 60);
+            dgvBefore.Size = new Size(442, 204);
+            dgvBefore.DataSource = dtEventRows;
+            dgvBefore.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvBefore   .RowHeadersVisible = false;
+            dgvBefore.AllowUserToAddRows = false;
+            dgvBefore.AllowUserToDeleteRows = false;
+            dgvBefore.ReadOnly = true;
+
+            dgvAfter.Location = new Point(485, 60);
+            dgvAfter.Size = new Size(442, 204);
+            dgvAfter.DataSource = dtl;
+            dgvAfter.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvAfter.RowHeadersVisible = false;
+            dgvAfter.AllowUserToAddRows = false;
+            dgvAfter.AllowUserToDeleteRows = false;
+            dgvAfter.ReadOnly = true;
+
+            button1.Text = "Confirmar";
+            button1.Location = new Point(757, 279);
+            button1.DialogResult = DialogResult.OK;
+
+            button2.Text = "Cancelar";
+            button2.Location = new Point(852, 279);
+            button2.DialogResult = DialogResult.Cancel;
+
+
+
+            // Adición de controles
+            form1.Controls.Add(lb1);
+            form1.Controls.Add(lb2);
+            form1.Controls.Add(lb3);
+            form1.Controls.Add(button1);
+            form1.Controls.Add(button2);
+            form1.Controls.Add(dgvBefore);
+            form1.Controls.Add(dgvAfter);
+            
+            form1.ShowDialog();
+
+            
+            if (form1.DialogResult == DialogResult.OK)
+            {
+                procesarEventoModificado();
+                form1.Dispose();
+            }
+            else
+            {
+                panelClsfDev.Expanded = false;
+                limpiarPanelAsignacion();
+                form1.Dispose();
+            }
+        }
+        
+        private void btProcesarAsignacionesEvt_Click(object sender, EventArgs e)
+        {
+            dialogoConfirmacionEvt();
+        }
+
+        private async Task<DataTable> clsfFacturasNuevoEvento()
+        {
+            Boolean existe = false;
+            int i = 0;
+            List<String> list = new List<string>();
+            DataTable LegalNumber = new DataTable();
+            dtCustomEvent = dtEventRows.Clone();
+            
+
+            foreach (DataRow row in dt2.Rows)
+            {
+                buscarEnLista(list, row.ItemArray[0].ToString(), out existe); // ¿Ya fue agregada la factura?
+
+                if (existe == false)
+                {
+                    dtCustomEvent.Rows.Add();
+                    await Task.Factory.StartNew(async () =>
+                    {
+                        LegalNumber = await functions.obtenerNumeroLegal(row.ItemArray[0].ToString(), conEpicor);
+                    }).Unwrap();
+                    dtCustomEvent.Rows[i][0] = row.ItemArray[0]; // Facturas
+                    dtCustomEvent.Rows[i][1] = LegalNumber.Rows[0].ItemArray[0]; // Número Legal
+                    dtCustomEvent.Rows[i][2] = dtEventRows.Rows[0].ItemArray[2]; // Cliente
+                    dtCustomEvent.Rows[i][3] = 1; // Lineas
+                    dtCustomEvent.Rows[i][4] = dtEventRows.Rows[0].ItemArray[4]; // Relación de Cobranza
+                    list.Add(row.ItemArray[0].ToString());
+                    i++;
+                }
+                else
+                {
+                    int x = 0;
+                    foreach (DataRow r in dtCustomEvent.Rows)
+                    {
+                        if (dtCustomEvent.Rows[x].ItemArray[0].ToString().Equals(row.ItemArray[0]))
+                            dtCustomEvent.Rows[x][3] = Convert.ToInt32(r.ItemArray[3]) + 1;
+                        x++;
+                    }
+                }
+            }
+            
+            return dtCustomEvent;
+        }
+
+        private async void procesarEventoModificado()
+        {
+            try
+            {
+                int i = 0;
+                file = new FileManager();
+                DataTable EventRecords = new DataTable(); // Contiene todos los registros del evento actual
+                DataTable dtPrint = new DataTable(); // Contiene los registros filtrados para procesar la factura
+                LoaderForm loading = new LoaderForm();
+
+                obtFolioProceso();
+                disableButtons();
+
+                // Recorrido del nuevo DataTable del evento modificado
+                foreach (DataRow rowCustomEvt in dtCustomEvent.Rows)
+                {
+                    /* ******************************************* */
+                    /* Creación del log de la relacion de cobranza */
+                    /* ******************************************* */
+                    lblFacturaEnProceso.Text = String.Format("Procesando factura {0}", dtCustomEvent.Rows[i][0]);
+                    panelProcesoEvtCustom.Visible = true;
+                    string folioRelacion = dtCustomEvent.Rows[i].ItemArray[4].ToString();
+                    file.createLog(folioRelacion);
+                    file.writeContentToFile("\n");
+                    file.writeContentToFile(String.Format("\n[ {1} ] - Comienza la generación de RMA para la factura: {0} ", dtCustomEvent.Rows[i].ItemArray[0].ToString(), System.DateTime.Now));
+                    txtFacturasProcesadas.Text += String.Format("Comienza la generación de RMA para la factura: {0}\n", dtCustomEvent.Rows[i].ItemArray[0].ToString());
+                    char[] separadores = { ',', ' ' };
+                    DataRow[] filasPorFactura = dt2.Select(String.Format("Facturas = {0}", dtCustomEvent.Rows[i].ItemArray[0].ToString()));
+                    dtPrint = filasPorFactura.CopyToDataTable();
+
+                    await Task.Factory.StartNew(async () =>
+                    {
+                        await generarRMA(dtPrint, Convert.ToInt32(dtCustomEvent.Rows[i][0]), dtCustomEvent.Rows[i][1].ToString().Trim(separadores), Convert.ToInt32(Regex.Replace(dtCustomEvent.Rows[i][2].ToString(), @"[^\d]", "", RegexOptions.None, TimeSpan.FromSeconds(1.5))), dtCustomEvent.Rows[i][4].ToString(), idSesion[1], Convert.ToInt32(dtCustomEvent.Rows[i][3]), varEventoID);
+                    }).Unwrap();
+                    
+                    txtFacturasProcesadas.Text += recolectorEventos + "\n";
+                    panelProcesoEvtCustom.Visible = false;
+                    i++;
+                }
+
+                /* ********************************************* */
+                /* Actualización de choferes despues del proceso */
+                /* ********************************************* */
+                advTreeDrivers.Nodes.Clear();
+                dgvFacturas.Visible = false;
+                dgvDetFactura.Visible = false;
+                data = new LoadInitData();
+                data.Show();
+                await Task.Factory.StartNew(async () =>
+                {
+                    await fillAdvTree();
+                }).Unwrap();
+                data.Close();
+
+                // Habilitado de botones para cerrar tarimas y turno
+                if (btnCierreTurno.Enabled == false)
+                {
+                    btnCierreTurno.Enabled = true;
+                    btnCorte.Enabled = true;
+                }
+
+                // Cierre del panel de asignación y limpieza de datos
+                limpiarPanelAsignacion();
+                panelClsfDev.Expanded = false;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+        }
+
+        private void buscarEnLista(List<string> lista, string elemento, out Boolean existe)
+        {
+            int facturaCargada = lista.FindIndex(delegate (string current)
+            {
+                return current.Contains(elemento);
+            });
+
+            existe = (facturaCargada > -1) ? true : false;
+        }
+
+        #endregion
         private async Task fillAdvTree()
         {
             try
             {
                 //DataTable sql = util.getRecords("SELECT x.ResponsableRelacion,c.Name,x.Evento_Key FROM TISERVER.DevolucionesTEST.dbo.Choferes c CROSS APPLY(SELECT d.ResponsableRelacion, Evento_Key FROM dbo.MS_DevChfrs_tst d WHERE d.ResponsableRelacion = c.Id)x GROUP BY x.ResponsableRelacion, c.Name, x.Evento_Key ORDER BY x.ResponsableRelacion;", null, conEpicor);
-                DataTable sql = util.getRecords("SELECT x.ResponsableRelacion,c.Name,x.Evento_Key,x.FolioRelacion FROM TISERVER.DevolucionesTEST.dbo.Choferes c CROSS APPLY(SELECT d.ResponsableRelacion, d.Evento_Key, d.FolioRelacion FROM dbo.MS_DevChfrs_tst d WHERE d.ResponsableRelacion = c.Id)x GROUP BY x.ResponsableRelacion, c.Name, x.Evento_Key, x.FolioRelacion ORDER BY x.ResponsableRelacion,x.FolioRelacion; ", null, conEpicor);
+                DataTable sql = util.getRecords(ConfigurationManager.AppSettings["syncChoferes"], null, conEpicor);
+                if (!util.catchError.Equals(""))
+                    MessageBox.Show(util.catchError);
+
 
                 advTreeDrivers.ImageList = imgListTreeDrivers;
                 DevComponents.AdvTree.Node nodeDriver;
@@ -1139,11 +1836,11 @@ namespace ControlDevoluciones
             }
             catch (System.Data.SqlClient.SqlException w)
             {
-                MessageBox.Show(w.Message);
+                MessageBox.Show(w.StackTrace, w.Message);
             }
             catch(Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(e.StackTrace, e.Message);
             }
         }
         

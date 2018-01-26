@@ -29,7 +29,7 @@ namespace Utilities
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace, ex.Message);
                 return null;
             }
         }
@@ -43,7 +43,7 @@ namespace Utilities
             }
             catch(Exception ex)
             {
-                catchError = ex.Message;
+                catchError = ex.Message + " => \n" + ex.StackTrace;
             }
         }
 
@@ -61,9 +61,15 @@ namespace Utilities
                     closeConnection(connection);
                 }
             }
+            catch (System.Data.SqlClient.SqlException sql)
+            {
+                catchError = sql.Message + " => \n" + sql.StackTrace;
+                mailNotification(catchError);
+            }
             catch (Exception w)
             {
-                catchError = w.Message;
+                catchError = w.Message + " => \n" + w.StackTrace;
+                mailNotification(catchError);
             }
             return dt;
         }
@@ -83,7 +89,8 @@ namespace Utilities
             }
             catch (Exception q)
             {
-                catchError = q.Message;
+                catchError = q.Message + " => \n" + q.StackTrace;
+                mailNotification(catchError);
             }
         }
 
@@ -92,10 +99,10 @@ namespace Utilities
             MailMessage Mensaje = new MailMessage(); // Instancia para preparar el cuerpo del correo
 
             // Parámetros y cuerpo del correo 
-            Mensaje.To.Add(new MailAddress("vorkelball@gmail.com"));
-            Mensaje.To.Add(new MailAddress("robertogarcia003@hotmail.com"));
+            Mensaje.To.Add(new MailAddress("rarroyo.1878@gmail.com"));
+            //Mensaje.To.Add(new MailAddress("robertogarcia003@hotmail.com"));
             Mensaje.From = new MailAddress("asesores@gicaor.com");
-            Mensaje.Subject = "Excepción encontrada en ControlDevoluciones";
+            Mensaje.Subject = "Excepción capturada en DevolucionesMAC";
             Mensaje.Body = "Buen día !! \n Ha ocurrido una excepción en la aplicación, a continuación se presenta la descripción completa \n\n" + exception;
 
 
