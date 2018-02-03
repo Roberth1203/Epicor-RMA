@@ -64,12 +64,12 @@ namespace Utilities
             catch (System.Data.SqlClient.SqlException sql)
             {
                 catchError = sql.Message + " => \n" + sql.StackTrace;
-                mailNotification(catchError);
+                mailNotification("DevolucionesMAC SQLException", "Ocurrió un problema al obtener registros", catchError);
             }
             catch (Exception w)
             {
                 catchError = w.Message + " => \n" + w.StackTrace;
-                mailNotification(catchError);
+                mailNotification("DevolucionesMAC Exception", "Ocurrió una acepción", catchError);
             }
             return dt;
         }
@@ -90,31 +90,38 @@ namespace Utilities
             catch (Exception q)
             {
                 catchError = q.Message + " => \n" + q.StackTrace;
-                mailNotification(catchError);
+                mailNotification("", "Ocurrió una Excelción", catchError);
             }
         }
 
-        public void mailNotification(string exception)
+        public void mailNotification(string subject, string defaultText, string exception)
         {
-            MailMessage Mensaje = new MailMessage(); // Instancia para preparar el cuerpo del correo
-
-            // Parámetros y cuerpo del correo 
-            Mensaje.To.Add(new MailAddress("rarroyo.1878@gmail.com"));
-            //Mensaje.To.Add(new MailAddress("robertogarcia003@hotmail.com"));
-            Mensaje.From = new MailAddress("asesores@gicaor.com");
-            Mensaje.Subject = "Excepción capturada en DevolucionesMAC";
-            Mensaje.Body = "Buen día !! \n Ha ocurrido una excepción en la aplicación, a continuación se presenta la descripción completa \n\n" + exception;
-
-
-            SmtpClient server = new SmtpClient("mail.gicaor.com", 366); // Especifico el servidor de salida
-            server.Credentials = new System.Net.NetworkCredential("asesores@gicaor.com", "GICrfv456");
-            server.EnableSsl = true;
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+            try
             {
-                return true;
-            };
-            server.Send(Mensaje);
+                MailMessage Mensaje = new MailMessage(); // Instancia para preparar el cuerpo del correo
+
+                // Parámetros y cuerpo del correo 
+                Mensaje.To.Add(new MailAddress("rarroyo.1878@gmail.com"));
+                //Mensaje.To.Add(new MailAddress("robertogarcia003@hotmail.com"));
+                Mensaje.From = new MailAddress("analista_ifc@gicaor.com");
+                Mensaje.Subject = subject;
+                Mensaje.Body = defaultText + "\n\n" + exception;
+
+
+                SmtpClient server = new SmtpClient("mail.gicaor.com", 366); // Especifico el servidor de salida
+                server.Credentials = new System.Net.NetworkCredential("analista_ifc@gicaor.com", "GICijn258");
+                server.EnableSsl = false;
+
+                ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+                {
+                    return true;
+                };
+                server.Send(Mensaje);
+            }
+            catch (System.Net.Mail.SmtpException mail)
+            {
+                Console.WriteLine(mail.Message + " => " + mail.StackTrace);
+            }
         }
 
             public static SQLiteConnection SQLiteConnect()

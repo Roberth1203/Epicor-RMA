@@ -29,7 +29,7 @@ namespace ControlDevoluciones
         string conEpicor = ConfigurationManager.AppSettings["connEpicor"].ToString();
         string TISERVER = ConfigurationManager.AppSettings["connRMADB"].ToString();
         string recolectorEventos, varEventoID;
-        Int32 valorPrevioCambio = 0, asigPrevioCambio = 0;
+        Double valorPrevioCambio = 0, asigPrevioCambio = 0;
         public List<string> partesRMA = new List<string>();
         public List<String> ReasonsList = new List<string>();
         public List<int> invoiceProcList = new List<int>(); //Lista de facturas ya procesadas
@@ -117,6 +117,10 @@ namespace ControlDevoluciones
                         dtEventRows = await functions.obtenerFacturas(varEventoID, conEpicor);
                     }).Unwrap();
 
+                    if (!functions.catcher.Equals(""))
+                        MessageBox.Show(functions.catcher, "Problema al consultar las facturas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
                     // Carga de facturas con lineas asignables a la lista para dispersión
                     if (functions.lineasAsignables == true)
                     {
@@ -158,6 +162,7 @@ namespace ControlDevoluciones
                 // Se asigna el turno al usuario y se impide el cierre de tarimas o turno en el proceso de RMA's
                 obtFolioProceso();
                 disableButtons();
+                advTreeDrivers.Enabled = false;
 
                 await Task.Factory.StartNew(async () =>
                 {
@@ -217,6 +222,8 @@ namespace ControlDevoluciones
                 /* ********************************************* */
                 /* Actualización de choferes despues del proceso */
                 /* ********************************************* */
+                advTreeDrivers.Enabled = true;
+                MessageBox.Show("Terminó la generación de RMA's", "Proceso terminado", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 advTreeDrivers.Nodes.Clear();
                 dgvFacturas.Visible = false;
                 dgvDetFactura.Visible = false;
@@ -448,7 +455,7 @@ namespace ControlDevoluciones
                     RMA = (obtainRMAHead.Rows.Count == 0) ? 0 : Convert.ToInt32(obtainRMAHead.Rows[0].ItemArray[0].ToString());
 
                     file.writeContentToFile(String.Format("[ {1} ] - " + epiAdapter.recolector, RMA, System.DateTime.Now));
-                    sqlQuery = String.Format("INSERT INTO tb_FactProc(FactNum,NumeroLegal,Cliente,Lineas,Relacion,Status,UsuarioCaptura,FechaCaptura) VALUES({0},'{1}','{2}',{3},'{4}',{5},'{6}',{7});", factura, legal, cliente, lineasFactura, folioRelacion, "2", epiUser.ToUpper(), "GETDATE()");
+                    sqlQuery = String.Format("INSERT INTO tb_FactProc(FactNum,NumeroLegal,Cliente,Lineas,Relacion,Status,UsuarioCaptura,FechaCaptura) VALUES({0},'{1}','{2}',{3},'{4}',{5},'{6}',GETDATE());", factura, legal, cliente, lineasFactura, folioRelacion, "2", epiUser.ToUpper());
                     util.SQLstatement(sqlQuery, TISERVER, null);
                 }
                 else
@@ -503,7 +510,7 @@ namespace ControlDevoluciones
 
                         try
                         {
-                            util.SQLstatement(String.Format("INSERT INTO tb_FactDtl(FactNum,FactLine,PartNum,LineDesc,PackNum,PackLine,ReturnReason,OrderNum,OrderLine,OrderRel,ReturnQty,QtyUOM,PartClass,Note,ZoneID,PrimBin) VALUES({0},{1},'{2}','{3}',{4},{5},'{6}',{7},{8},{9},{10},'{11}','{12}','{13}','{14}','{15}');", factura, lineaFactura, parte, desc, Pack, PackLine, razon, numOrden, lineaOrden, relOrden, cant, UOM, ubicacion, comentarios, zona, primbin), TISERVER, null);
+                            util.SQLstatement(String.Format("INSERT INTO tb_FactDtl(FactNum,FactLine,PartNum,LineDesc,PackNum,PackLine,ReturnReason,OrderNum,OrderLine,OrderRel,ReturnQty,QtyUOM,PartClass,Note,ZoneID,PrimBin,RMANum,RMALine,EventoKey, FechaCaptura) VALUES({0},{1},'{2}','{3}',{4},{5},'{6}',{7},{8},{9},{10},'{11}','{12}','{13}','{14}','{15}',{16},{17},'{18}',GETDATE());", factura, lineaFactura, parte, desc, Pack, PackLine, razon, numOrden, lineaOrden, relOrden, cant, UOM, ubicacion, comentarios, zona, primbin, RMA, lineaRMA, varEventoID), TISERVER, null);
                         }
                         catch (System.Data.SqlClient.SqlException x)
                         {
@@ -999,16 +1006,21 @@ namespace ControlDevoluciones
 
         private async void listPartesReasignables_ItemClick(object sender, EventArgs e)
         {
+            string adv = listPartesReasignables.SelectedItem.ToString();
+            if (dgvDetalleLineasAsignables.Rows.Count > 0)
+                confirmAsignaciones(txPartNumDev.Text);
+
             DataTable d = new DataTable();
             txReturnQtyDev.Text = "0";
             txAvailableQtyDev.Text = "0";
             txPartNumDev.Text = "";
+            listPartesReasignables.Enabled = false;
             panelAwaitForDetail.Visible = true;
-            txPartNumDev.Text = listPartesReasignables.SelectedItem.ToString();
+            txPartNumDev.Text = adv;
 
             await Task.Factory.StartNew(async () =>
             {
-                d = await consultarDetallado(listPartesReasignables.SelectedItem.ToString(), varEventoID);
+                d = await consultarDetallado(adv, varEventoID);
             }).Unwrap();
             
             dgvDetalleLineasAsignables.DataSource = d;
@@ -1069,6 +1081,7 @@ namespace ControlDevoluciones
             txReturnQtyDev.Text = calcDevuelto().ToString();
             txAvailableQtyDev.Text = "0";
             panelAwaitForDetail.Visible = false;
+            listPartesReasignables.Enabled = true;
             btCargarLineas.Enabled = true;
         }
 
@@ -1145,32 +1158,35 @@ namespace ControlDevoluciones
                 y++;
             }
 
-            do
+            if (l1.Count > 0)
             {
-                string part = l1[ind1]; //asignación de parte a procesar
-                string[] fact = l2[ind1].ToString().Split(trim); //separacion de DitrDev
-                if (fact.Length > 5)
-                    Console.WriteLine("--> " + fact[0]);
                 do
                 {
-                    if (!fact[ind2].Trim().Equals(""))
+                    string part = l1[ind1]; //asignación de parte a procesar
+                    string[] fact = l2[ind1].ToString().Split(trim); //separacion de DitrDev
+                    if (fact.Length > 5)
+                        Console.WriteLine("--> " + fact[0]);
+                    do
                     {
-                        DataTable bum = util.getRecords(String.Format("SELECT r.Facturas,''  AS Linea,r.IdProducto,''  AS Descripcion,''  AS Empaque,''  AS LineaE,r.motivodevolucion,''  AS Orden,''  AS LineaO,''  AS Relacion,r.DistrDev,r.unidad,r.DistrClsf,r.Observaciones,r.ZoneID,r.PrimBin FROM ERP10DB.dbo.MS_DevChfrs_tst r WHERE Evento_Key = '{0}' AND IdProducto = '{1}' ORDER BY r.IdProducto, r.Facturas;", varEventoID, part), null, conEpicor);
-                        await Task.Factory.StartNew(async () =>
+                        if (!fact[ind2].Trim().Equals(""))
                         {
-                            dt3 = await functions.getInvoiceDtl(bum, conEpicor, fact[ind2].Trim());
-                        }).Unwrap();
+                            DataTable bum = util.getRecords(String.Format("SELECT r.Facturas,''  AS Linea,r.IdProducto,''  AS Descripcion,''  AS Empaque,''  AS LineaE,r.motivodevolucion,''  AS Orden,''  AS LineaO,''  AS Relacion,r.DistrDev,r.unidad,r.DistrClsf,r.Observaciones,r.ZoneID,r.PrimBin FROM ERP10DB.dbo.MS_DevChfrs_tst r WHERE Evento_Key = '{0}' AND IdProducto = '{1}' ORDER BY r.IdProducto, r.Facturas;", varEventoID, part), null, conEpicor);
+                            await Task.Factory.StartNew(async () =>
+                            {
+                                dt3 = await functions.getInvoiceDtl(bum, conEpicor, fact[ind2].Trim());
+                            }).Unwrap();
 
-                        foreach (DataRow tmp in dt3.Rows)
-                            dt2.ImportRow(tmp);
+                            foreach (DataRow tmp in dt3.Rows)
+                                dt2.ImportRow(tmp);
+                        }
+                        ind2 += 4;
                     }
-                    ind2 += 4;
+                    while (ind2 < fact.Length);
+                    ind2 = 0; //Reinicio del indice para recorrer el array fact
+                    ind1++;
                 }
-                while (ind2 < fact.Length);
-                ind2 = 0; //Reinicio del indice para recorrer el array fact
-                ind1++;
+                while (ind1 < l1.Count);
             }
-            while (ind1 < l1.Count);
         }
 
         private async Task<DataTable> consultarDetallado(string partNum, string Evento)
@@ -1343,9 +1359,9 @@ namespace ControlDevoluciones
             tmrLoader.Enabled = false;
         }
 
-        private void cargarAsignaciones()
+        private void cargarAsignaciones(string parte)
         {
-            string currentItem = listPartesReasignables.SelectedItem.ToString();
+            string currentItem = parte;
             foreach (DataGridViewRow row in dgvDetalleLineasAsignables.Rows)
             {
                 if (Convert.ToDouble(row.Cells[1].Value) > 0)
@@ -1424,8 +1440,8 @@ namespace ControlDevoluciones
 
         private void dgvDetalleLineasAsignables_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            valorPrevioCambio = Convert.ToInt32(dgvDetalleLineasAsignables.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
-            asigPrevioCambio = Convert.ToInt32(txAvailableQtyDev.Text);
+            valorPrevioCambio = Convert.ToDouble(dgvDetalleLineasAsignables.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+            asigPrevioCambio = Convert.ToDouble(txAvailableQtyDev.Text);
         }
 
         private void btCargarLineas_Click(object sender, EventArgs e)
@@ -1438,8 +1454,8 @@ namespace ControlDevoluciones
             Double result = 0;
 
             foreach (DataGridViewRow row in dgvDetalleLineasAsignables.Rows)
-                if (Convert.ToInt32(row.Cells[1].Value) > 0)
-                    result += Convert.ToInt32(row.Cells[1].Value);
+                if (Convert.ToDouble(row.Cells[1].Value) > 0)
+                    result += Convert.ToDouble(row.Cells[1].Value);
 
             return result;
         }
@@ -1451,7 +1467,7 @@ namespace ControlDevoluciones
 
             foreach (DataGridViewRow row in dgvDetalleLineasAsignables.Rows)
             {
-                if (Convert.ToInt32(row.Cells[1].Value) > 0)
+                if (Convert.ToDouble(row.Cells[1].Value) > 0)
                     res += Convert.ToDouble(row.Cells[1].Value);
             }
 
@@ -1501,7 +1517,7 @@ namespace ControlDevoluciones
 
             return f;
         }
-
+        
         private void confirmAsignaciones(string partNum)
         {
             Form formConfirm = new Form();
@@ -1538,7 +1554,7 @@ namespace ControlDevoluciones
             formConfirm.ShowDialog();
             if (formConfirm.DialogResult == DialogResult.OK)
             {
-                cargarAsignaciones();
+                cargarAsignaciones(partNum);
                 formConfirm.Dispose();
             }
             else
@@ -1567,17 +1583,21 @@ namespace ControlDevoluciones
             form1.MaximizeBox = false;
             form1.MinimizeBox = false;
 
+            Double r = 0;
+            foreach(DataRow rowe in dt2.Rows)
+                r += Convert.ToDouble(rowe.ItemArray[10]);
+
             lb1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lb1.Text = "¿Confirma los cambios realizados?";
             lb1.Size = new Size(333, 24);
             lb1.Location = new Point(23, 9);
             lb2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lb2.Text = "Devolución Inicial";
-            lb2.Size = new Size(131, 16);
+            lb2.Text = String.Format("Devolución Inicial: {0} unidades.", r);
+            lb2.Size = new Size(231, 16);
             lb2.Location = new Point(9, 41);
             lb3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lb3.Text = "Devolución con ajustes del usuario";
-            lb3.Size = new Size(250, 16);
+            lb3.Text = String.Format("Devolución con reasignaciones: {0} unidades.", r);
+            lb3.Size = new Size(350, 16);
             lb3.Location = new Point(499, 41);
             DataGridView dgvBefore = new DataGridView();
             DataGridView dgvAfter = new DataGridView();
@@ -1726,6 +1746,7 @@ namespace ControlDevoluciones
                 /* ********************************************* */
                 /* Actualización de choferes despues del proceso */
                 /* ********************************************* */
+                MessageBox.Show("Terminó la generación de RMA's", "Proceso terminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 advTreeDrivers.Nodes.Clear();
                 dgvFacturas.Visible = false;
                 dgvDetFactura.Visible = false;
@@ -1752,6 +1773,12 @@ namespace ControlDevoluciones
             {
                 MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
+        }
+
+        private void btnNoAsignar_Click(object sender, EventArgs e)
+        {
+            limpiarPanelAsignacion();
+            panelClsfDev.Expanded = false;
         }
 
         private void buscarEnLista(List<string> lista, string elemento, out Boolean existe)

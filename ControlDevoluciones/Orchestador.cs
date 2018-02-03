@@ -29,6 +29,7 @@ namespace ControlDevoluciones
 
         public async Task<DataTable> obtenerFacturas(string EventKey, string EpiConnection)
         {
+            catcher = String.Empty;
             try
             {
                 lineasAsignables = false;
@@ -262,8 +263,9 @@ namespace ControlDevoluciones
                 dtFacturas.Columns.Remove("DistrDev");
                 return dtFacturas;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                catcher = e.Message + " => " + e.StackTrace;
                 return dtFacturas;
             }
         }

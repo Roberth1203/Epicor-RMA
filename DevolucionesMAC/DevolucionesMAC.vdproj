@@ -93,12 +93,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_1225D8C79EBC1E8B208983D37BE63EF2"
-        "OwnerKey" = "8:_E395279A62074C848D310ACA15945646"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1A5E8B9AC4929AA4E530EDA734B44DEE"
         "OwnerKey" = "8:_E395279A62074C848D310ACA15945646"
         "MsmSig" = "8:_UNDEFINED"
@@ -207,6 +201,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_5665554F30AD40ED868AC63C8BEAC8A6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5A7CDFBF0F748DE3FA5399CB27FC0D5F"
         "OwnerKey" = "8:_E395279A62074C848D310ACA15945646"
         "MsmSig" = "8:_UNDEFINED"
@@ -237,12 +237,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6C03D89CFA064E56BCF275CA5A257078"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_6F8B4748212C0578D8DF28272E0578D2"
         "OwnerKey" = "8:_E395279A62074C848D310ACA15945646"
         "MsmSig" = "8:_UNDEFINED"
@@ -269,18 +263,6 @@
         {
         "MsmKey" = "8:_7B1ED6A6F18632499E4917F7A37C046C"
         "OwnerKey" = "8:_1DF1D3258488F8DB16950D447878F9FA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_845A579EE2C0EE5B529171DDF6775DF1"
-        "OwnerKey" = "8:_1225D8C79EBC1E8B208983D37BE63EF2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_845A579EE2C0EE5B529171DDF6775DF1"
-        "OwnerKey" = "8:_E395279A62074C848D310ACA15945646"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -418,12 +400,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_059DEA2A236EB938F0D14E4B53C860DC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E395279A62074C848D310ACA15945646"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -437,18 +413,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A230FDD3CBAB1887410252D2BB130877"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1225D8C79EBC1E8B208983D37BE63EF2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_845A579EE2C0EE5B529171DDF6775DF1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -595,6 +559,12 @@
         "OwnerKey" = "8:_9BA92C51681CD5F9E280287BE964BD66"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_059DEA2A236EB938F0D14E4B53C860DC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -613,6 +583,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -629,6 +607,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -696,34 +682,13 @@
             "AssemblyAsmDisplayName" = "8:Epicor.ServiceModel, Version=3.0.7.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_0AAAB160BD98C5D7EA36971B2DFB0BBE"
+                    {
+                    "Name" = "8:Epicor.ServiceModel.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Epicor.ServiceModel.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_E7BCB35F32234DF981BA5192790EADD1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1225D8C79EBC1E8B208983D37BE63EF2"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:MahApps.Metro.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E7BCB35F32234DF981BA5192790EADD1"
@@ -810,6 +775,11 @@
             "AssemblyAsmDisplayName" = "8:EpicorAdapters, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_20870E183690603321294D7A1AC5FB32"
+                    {
+                    "Name" = "8:EpicorAdapters.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:EpicorAdapters.dll"
             "TargetName" = "8:"
@@ -867,6 +837,11 @@
             "AssemblyAsmDisplayName" = "8:Ice.Contracts.BO.UserFile, Version=3.0.7.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_2E65829F77FBFB2200D8BA1CA18DCD8E"
+                    {
+                    "Name" = "8:Ice.Contracts.BO.UserFile.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Ice.Contracts.BO.UserFile.dll"
             "TargetName" = "8:"
@@ -893,6 +868,11 @@
             "AssemblyAsmDisplayName" = "8:Erp.Contracts.BO.RMADisp, Version=10.0.700.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_3739822A776D7754E081767CC1462DDF"
+                    {
+                    "Name" = "8:Erp.Contracts.BO.RMADisp.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Erp.Contracts.BO.RMADisp.dll"
             "TargetName" = "8:"
@@ -919,6 +899,11 @@
             "AssemblyAsmDisplayName" = "8:Ice.Lib.AppSettingsHandler, Version=3.0.7.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_40A7C5677EC1393AAB4FAE12003261EF"
+                    {
+                    "Name" = "8:Ice.Lib.AppSettingsHandler.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Ice.Lib.AppSettingsHandler.dll"
             "TargetName" = "8:"
@@ -945,6 +930,11 @@
             "AssemblyAsmDisplayName" = "8:itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_45CD21D1A9FC5EC6C88113E4846E8FE3"
+                    {
+                    "Name" = "8:itextsharp.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:itextsharp.dll"
             "TargetName" = "8:"
@@ -995,6 +985,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5665554F30AD40ED868AC63C8BEAC8A6"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\Pictures\\ICO\\app.ico"
+            "TargetName" = "8:app.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_E7BCB35F32234DF981BA5192790EADD1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5A7CDFBF0F748DE3FA5399CB27FC0D5F"
             {
             "AssemblyRegister" = "3:1"
@@ -1033,6 +1043,11 @@
             "AssemblyAsmDisplayName" = "8:Erp.Contracts.BO.InvTransfer, Version=10.0.700.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_5F11262309E4E1358EE70BC82C673E7F"
+                    {
+                    "Name" = "8:Erp.Contracts.BO.InvTransfer.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Erp.Contracts.BO.InvTransfer.dll"
             "TargetName" = "8:"
@@ -1083,26 +1098,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6C03D89CFA064E56BCF275CA5A257078"
-            {
-            "SourcePath" = "8:C:\\Program Files (x86)\\CAOR TI\\Devoluciones MAC\\AppIcon.ico"
-            "TargetName" = "8:AppIcon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_E7BCB35F32234DF981BA5192790EADD1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6F8B4748212C0578D8DF28272E0578D2"
             {
             "AssemblyRegister" = "3:1"
@@ -1141,6 +1136,11 @@
             "AssemblyAsmDisplayName" = "8:Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_7913595EDEF4F017EF8A10FF253F612C"
+                    {
+                    "Name" = "8:Utilities.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Utilities.dll"
             "TargetName" = "8:"
@@ -1174,32 +1174,6 @@
                     }
                 }
             "SourcePath" = "8:Ice.Contracts.Lib.SessionMod.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_E7BCB35F32234DF981BA5192790EADD1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_845A579EE2C0EE5B529171DDF6775DF1"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:System.Windows.Interactivity.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E7BCB35F32234DF981BA5192790EADD1"
@@ -1348,6 +1322,11 @@
             "AssemblyAsmDisplayName" = "8:Erp.Contracts.BO.RMAProc, Version=10.0.700.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_BBD0A4A2A1ECC2773490504FD8473FCF"
+                    {
+                    "Name" = "8:Erp.Contracts.BO.RMAProc.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Erp.Contracts.BO.RMAProc.dll"
             "TargetName" = "8:"
@@ -1436,6 +1415,11 @@
             "AssemblyAsmDisplayName" = "8:Erp.Common.ContractInterfaces, Version=10.0.700.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_D1AA75507119EE795F5DEC1C8617C4E3"
+                    {
+                    "Name" = "8:Erp.Common.ContractInterfaces.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Erp.Common.ContractInterfaces.dll"
             "TargetName" = "8:"
@@ -1462,6 +1446,11 @@
             "AssemblyAsmDisplayName" = "8:Erp.Contracts.BO.ARInvoice, Version=10.0.700.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_D7F2B33CD558B65C2FF22F3DF1BEF148"
+                    {
+                    "Name" = "8:Erp.Contracts.BO.ARInvoice.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Erp.Contracts.BO.ARInvoice.dll"
             "TargetName" = "8:"
@@ -1711,7 +1700,7 @@
             "Target" = "8:_E395279A62074C848D310ACA15945646"
             "Folder" = "8:_0B320A76CD9B4C62916B06AA91C01FB5"
             "WorkingFolder" = "8:_E7BCB35F32234DF981BA5192790EADD1"
-            "Icon" = "8:_6C03D89CFA064E56BCF275CA5A257078"
+            "Icon" = "8:_5665554F30AD40ED868AC63C8BEAC8A6"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E11A17EFEF674A119E371C43F1E31B60"
@@ -1725,7 +1714,7 @@
             "Target" = "8:_E395279A62074C848D310ACA15945646"
             "Folder" = "8:_2825AEAE951C42DBBC5CF8AA0995F7CE"
             "WorkingFolder" = "8:_E7BCB35F32234DF981BA5192790EADD1"
-            "Icon" = "8:_6C03D89CFA064E56BCF275CA5A257078"
+            "Icon" = "8:_5665554F30AD40ED868AC63C8BEAC8A6"
             "Feature" = "8:"
             }
         }
